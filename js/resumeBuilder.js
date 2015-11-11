@@ -1,1 +1,1 @@
-$("#education").append("Robert");
+$("#main").append("Robert Davis");
