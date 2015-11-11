@@ -1,1 +1,1 @@
-$(".main").append("Robert");
+$("div").append("Robert");
