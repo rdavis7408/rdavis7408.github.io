@@ -1,1 +1,3 @@
-$("#main").append("Robert Davis");
+$(document).ready(function() {
+  $("#main").append("Robert Davis");
+});
