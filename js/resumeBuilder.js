@@ -10,7 +10,7 @@ var bio = {
   "email" : "<img id= emailImg src = 'images/rdavis_BlackRobotoEmail.png' />",
   "role" : "Senior Business Analyst"
 };
-$("#main").prepend(bio.name);
+$("#main").append(bio.name);
 $("#main").append(bio.email);
 
 
