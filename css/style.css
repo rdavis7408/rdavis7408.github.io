@@ -152,6 +152,9 @@ img {
   padding: 10px;
 }
 
+.emailImg {
+    padding: 0;
+}
 
 /* Bar chart stuff */
 .chart div {
