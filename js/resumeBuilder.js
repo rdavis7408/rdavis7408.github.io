@@ -38,6 +38,6 @@ formattedContactInfo.push(HTMLtwitter.replace("%data%", bio.contacts.twitter));
 formattedContactInfo.push(HTMLlocation.replace("%data%", bio.contacts.location));
 
 
-$("#header").prepend(formattedName);
+$("#header").append(formattedName);
 
 
