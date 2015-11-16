@@ -9,7 +9,7 @@ var bio = {
 	},
 	"picture": "",
 	"welcomeMessage": "Currently helping others turn data into information through reporting, visualizations and data mining",
-	"skills": ["Python", "R Language", "Transact SQL", "PL/SQL", "Tableau", "Salesforce"]
+	"skills": ["Python", "R Language", "Transact SQL", "PL/SQL", "Tableau", "Salesforce.com", "Visual Basics for Applications"]
 };
 
 var work = {
