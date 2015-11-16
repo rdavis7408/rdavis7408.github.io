@@ -7,7 +7,7 @@ $("#header").append(formattedRole);
 
 var bio = {
   "name":"Robert L. Davis",
-  "email" : "<img id= emailImg src = 'images/rdavis_White_Email_Small.gif' />Email : ",
+  "email" : "<p>Email : </p> <img id= emailImg src = 'images/rdavis_White_Email_Small.gif' /> ",
   "role" : "Senior Business Analyst"
 };
 
