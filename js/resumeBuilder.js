@@ -15,7 +15,8 @@ var bio = {
   "name":"Robert L. Davis",
   "role" : "Senior Business Analyst",
   "email" :  "RDavis7408@gmail.com", 
-  "skills" : skills
+  "skills" : skills,
+  "URL" : "https://www.linkedin.com/in/robert-davis-46a26a12"
 };
 $("#main").append(bio.name);
 $("#main").append(bio.email);
@@ -31,4 +32,5 @@ $("#main").append(work.Employer);
 $("#main").append(work.Time);
 $("#main").append(workObject.currentCity);
 
+var formattedRole = HTMLskillsStart.replace("%data%", bio.skills);
 
