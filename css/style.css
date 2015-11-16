@@ -156,6 +156,7 @@ img {
     padding: 0;
     width: 100px;
     height: 20px;
+    display: Inline;
 }
 
 /* Bar chart stuff */
