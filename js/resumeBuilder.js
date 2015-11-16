@@ -60,14 +60,14 @@ var education = {
 	"schools": [
 		{ "name": "Saint Joseph's University",
 			"datesAttended": "1990 - 1992",
-			"location": "Philadelphia , PA",
+			"location": "Philadelphia, Pennsylvania",
 			"degree": "Masters of Science",
 			"major": "Secondary Education",
 			"url": "www.sju.edu"
 		},
 		{ "name": "The University of Alabama",
 			"datesAttended": "1986 - 1989",
-			"location": "Tuscaloosa , AL",
+			"location": "Tuscaloosa, Alabama",
 			"degree": "Bachelor of Arts",
 			"major": "History",
 			"url": "www.ua.edu"
@@ -315,12 +315,12 @@ $(function () {
 			}
 		},
 		series: [{
-				name: 'Java',
+				name: 'R',
 				color: 'rgba(223, 83, 83, .5)',
 				data: [[2014, 11], [2013, 11], [2012, 11], [2011, 8], [2010, 4], [2009, 12], [1998, 8], [1999, 8], [2000, 4]]
 			},
 			{
-				name: 'python',
+				name: 'Python',
 				color: 'rgba(119, 152, 191, .5)',
 				data: [[2014, 1], [2013, 1], [2012, 1], [2011, 1]]
 			},
@@ -335,12 +335,12 @@ $(function () {
 				data: [[2010, 2], [2006, 4]]
 			},
 			{
-				name: 'C++',
+				name: 'VBA',
 				color: 'rgba(0, 102, 0, .5)',
 				data: [[2004, 12], [2003, 6]]
 			},
 			{
-				name: 'C',
+				name: 'Tableau',
 				color: 'rgba(0, 102, 0, .5)',
 				data: [[1997, 8], [2004, 2], [2008, 4]]
 			},
