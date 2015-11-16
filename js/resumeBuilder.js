@@ -13,7 +13,7 @@ var bio = {
   "email" :  "RDavis7408@gmail.com", 
   "role" : "Senior Business Analyst"
 };
-
-$("#header").append(bio.email);
+$("#main").append(bio.name);
+$("#main").append(bio.email);
 
 
