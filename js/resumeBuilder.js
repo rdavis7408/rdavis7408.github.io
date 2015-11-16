@@ -1,6 +1,6 @@
 var name = "Robert L. Davis"
 var role = "Senior Business Analyst"
-var email = "<img  id= emailImg src = 'images/rdavis_White_Email_Small.gif' />"
+var email = "RDavis7408@gmail.com"
 var formattedName = HTMLheaderName.replace("%data%",name)
 var formattedRole = HTMLheaderRole.replace("%data%", role)
 var formattedEmail = HTMLheaderEmail.replace("%data%", email)
