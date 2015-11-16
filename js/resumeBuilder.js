@@ -39,5 +39,5 @@ formattedContactInfo.push(HTMLlocation.replace("%data%", bio.contacts.location))
 
 $("#header").prepend(formattedRole);
 $("#header").prepend(formattedName);
-$("#header").append(formattedBioPic);
+
 $("#header").append(formattedWelcomeMsg);
