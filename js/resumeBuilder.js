@@ -16,15 +16,15 @@ var bio = {
 $("#main").append(bio.name);
 $("#main").append(bio.email);
 
-var workObject = {
-  "currentPosition" : "Senior Business Analyst",
-  "currentEmployer" : "AIG",
-  "currentTime" : "2",
-  "currentCity" : "Brentwood, TN"
+var work = {
+  "Position" : "Senior Business Analyst",
+  "Employer" : "AIG",
+  "Time" : "2",
+  "City" : "Brentwood, TN"
   }
-$("#main").append(workObject.currentPosition);
-$("#main").append(workObject.currentEmployer);
-$("#main").append(workObject.currentTime);
+$("#main").append(work.Position);
+$("#main").append(work.Employer);
+$("#main").append(work.Time);
 $("#main").append(workObject.currentCity);
 
 
