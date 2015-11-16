@@ -7,11 +7,15 @@ var formattedRole = HTMLheaderRole.replace("%data%", role)
 $("#header").prepend(formattedName);
 $("#header").append(formattedRole);
 
+var skills = [
+  "Python", "R Language", "Visual Basic for Applications", "SQL", "Transact SQL", "PL / SQL",
+  "Tableau", "Salesforce Administration", "SQL Developer", "MS Access", "MS Excel", "MS Word", "MS PowerPoint"]
 
 var bio = {
   "name":"Robert L. Davis",
+  "role" : "Senior Business Analyst",
   "email" :  "RDavis7408@gmail.com", 
-  "role" : "Senior Business Analyst"
+  "skills" : skills
 };
 $("#main").append(bio.name);
 $("#main").append(bio.email);
