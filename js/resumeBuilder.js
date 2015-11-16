@@ -1,6 +1,4 @@
-var skills = [
-  "Python", "R Language", "Visual Basic for Applications", "SQL", "Transact SQL", "PL / SQL",
-  "Tableau", "Salesforce Administration", "SQL Developer", "MS Access", "MS Excel", "MS Word", "MS PowerPoint"]
+ 
 
 var bio = {
   "name":"Robert L. Davis",
@@ -8,12 +6,14 @@ var bio = {
   "contacts" : {
         "email" :  "RDavis7408@gmail.com",
         "twitter" : "@robertdavis",
+        "URL" : "https://www.linkedin.com/in/robert-davis-46a26a12",
         "location" : "Pleasant View, TN"
   },
   "welcomeMessage": "Creating information through reporting, visualizations, data mining and communication"
    
-  "skills" : skills,
-  "URL" : "https://www.linkedin.com/in/robert-davis-46a26a12"
+  "skills" : ["Python", "R Language", "Visual Basic for Applications", "SQL", "Transact SQL", "PL / SQL",
+  "Tableau", "Salesforce Administration", "SQL Developer", "MS Access", "MS Excel", "MS Word", "MS PowerPoint"]
+  
 };
 
 
@@ -33,7 +33,7 @@ var formattedWelcomeMsg = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
 
 var formattedContactInfo = [];
 formattedContactInfo.push(HTMLemail.replace("%data%", bio.contacts.email));
-formattedContactInfo.push(HTMLgithub.replace("%data%", bio.contacts.github));
+formattedContactInfo.push(HTMLgithub.replace("%data%", bio.contacts.URL));
 formattedContactInfo.push(HTMLtwitter.replace("%data%", bio.contacts.twitter));
 formattedContactInfo.push(HTMLlocation.replace("%data%", bio.contacts.location));
 
