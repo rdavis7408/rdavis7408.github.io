@@ -27,7 +27,7 @@ var work = {
   }
 
 
-var formattedName = HTMLheaderName.replace("%data%",bio.name)
+var formattedName = HTMLheaderName.replace("%data%", bio.name);
 var formattedRole = HTMLHeaderRole.replace("%data%", bio.role);
 var formattedWelcomeMsg = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
 
