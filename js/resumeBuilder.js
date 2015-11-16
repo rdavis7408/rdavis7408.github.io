@@ -14,6 +14,6 @@ var bio = {
   "role" : "Senior Business Analyst"
 };
 
-$("#header").append(bio.email);
+//$("#header").append(bio.email);
 
 
