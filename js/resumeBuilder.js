@@ -60,14 +60,14 @@ var education = {
 	"schools": [
 		{ "name": "Saint Joseph's University",
 			"datesAttended": "1990 - 1992",
-			"location": "Philadelphia, Pennsylvania",
+			"location": "Philadelphia, Pennsylvania, United States",
 			"degree": "Masters of Science",
 			"major": "Secondary Education",
 			"url": "www.sju.edu"
 		},
 		{ "name": "The University of Alabama",
 			"datesAttended": "1986 - 1989",
-			"location": "Tuscaloosa, Alabama",
+			"location": "Tuscaloosa, Alabama, United States",
 			"degree": "Bachelor of Arts",
 			"major": "History",
 			"url": "www.ua.edu"
