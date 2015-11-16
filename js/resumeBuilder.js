@@ -1,92 +1,58 @@
 var bio = {
-	"name": "Cheryl Court",
-	"role": "Software Developer",
+	"name": "Robert L. Davis",
+	"role": "Senior Business Analyst",
 	"contacts": {
-		"email": "cheryl.court@gmail.com",
-		"github": "cherylcourt",
-		"twitter": "@cherylcourt",
-		"location": "Edmonton, Alberta, Canada"
+		"email": "rdavis7408@gmail.com",
+		"github": "rdavis7408",
+		"twitter": "@obertdavis",
+		"location": "Pleasant View, TN"
 	},
-	"picture": "images/me.png",
-	"welcomeMessage": "I'm currently working as a Software Developer in Edmonton, Alberta, Canada.  Thanks for stopping by!",
-	"skills": ["Java", "python", "Software Development", "Test Driven Development", "Retrospective Facilitation"]
+	"picture": "",
+	"welcomeMessage": "Currently helping others turn data into information through reporting, visualizations and data mining",
+	"skills": ["Python", "R Language", "Transact SQL", "PL/SQL", "Tableau", "Salesforce"]
 };
 
 var work = {
 	"jobs": [
 		{
-			"employer": "Enbridge",
-			"title": "Software Developer",
-			"location": "Edmonton, Alberta, Canada",
-			"datesWorked": "September 2008 - Present",
-			"description": "My primary responsibilities involve all aspects of developing and supporting critical software " +
-				"applications in a variety of languages including Java, python, C++ and Perl in both greenfield and " +
-				"legacy systems.  This work includes, but is not limited to, database design, software architecture design, high level and " +
-				"detailed estimates as well as peer review of submitted work. I am also very involved in encouraging " +
-			"communication and collaboration within the team and have experience giving technical presentations as well " +
+			"employer": "AIG",
+			"title": "Senior Business Analyst",
+			"location": "Brentwood, TN",
+			"datesWorked": "2014 - Present",
+			"description": "My primary responsibilitiese giving technical presentations as well " +
 			"as facilitating project retrospective discussions."
 		},
 		{
-			"employer": "Epcor",
-			"title": "Systems Analyst",
-			"location": "Edmonton, Alberta, Canada",
-			"datesWorked": "September 2003 - April 2006",
-			"description": "I worked in a few different capacities here from internal application support of " +
-			"internal users using third party customized applications to working on internal software applications " +
+			"employer": "Discovery Communications",
+			"title": "Data Analyst",
+			"location": "Nashville, TN",
+			"datesWorked": "2008 - 2014",
+			"description": "I worked innal software applications " +
 			"built using Oracle PL/SQL.  I also learned and used PHP to develop an internal web site to facilitate " +
 			"communication between the quality control and development teams by tracking builds, releases and issues."
 		},
 		{
-			"employer": "Matrikon",
-			"title": "Programmer",
-			"location": "Edmonton, Alberta, Canada",
-			"datesWorked": "March 2002 - September 2003",
+			"employer": "Dillon Transportation",
+			"title": "Demand Planner",
+			"location": "Ashland City, TN",
+			"datesWorked": "2005 - 2008",
 			"description": "I developed software for external clients in a variety of languages including C#.  This " +
 			"included design, development and deployment of back end systems as well as front end graphical user interfaces."
 		},
 		{
-			"employer": "University of Windsor",
-			"title": "Teaching Assisstant / Computer Centre Support / Computer Science Tutor",
-			"location": "Windsor, Ontario, Canada",
-			"datesWorked": "September 1998 - April 2001",
-			"description": "I supervised labs for the second year advanced programming class in C as a teaching " +
-			"assisstant.  At the University Computer Centre I helped students with use of the computing resources " +
-			"available.  As a computer science tutor I aided students with class work and helped them through problems."
-		},
-		{
-			"employer": "ABB",
-			"title": "Praktikant",
-			"location": "Baden, Switzerland",
-			"datesWorked": "May 2000 - August 2000",
-			"description": "This was my final four month co-op placement through the University Co-op program.  I " +
-			"designed and implemented a prototype software application using JES (Java Embedded Server) and JMS (Java " +
-			"Messaging System) for communication with a European train system.  I was also involved in a collaborative " +
-			"effort of co-authoring a software patent with my colleagues involving JMS technology."
-		},
-		{
-			"employer": "Ontario Power Generation",
-			"title": "Programmer",
-			"location": "Kincardine, Ontario, Canada",
-			"datesWorked": "September 1999 - December 1999",
-			"description": "This was my third four month co-op placement through the University Co-op program. I " +
-			"developed virtual control room displays for operator training at the Kincardine Nuclear Power Plant."
-		},
-		{
-			"employer": "Cornerstone Technology",
-			"title": "Software Developer",
-			"location": "Windsor, Ontario, Canada",
-			"datesWorked": "May 1998 - April 1999",
-			"description": "I spent my first and second four month co-op placements here.  During my first placement I " +
-			"completed my given duties in less than half the time expected so I was able to work on developing a " +
-			"prototype of an expert system to design CAD drawings of injection moulds using CLIPS, a rules-based " +
-			"language.  I also had the opportunity to create a database management system using Delphi."
+			"employer": "Ryder",
+			"title": "Logistics Engineer",
+			"location": "Ashland City, TN",
+			"datesWorked": "2000 - 2005",
+			"description": "Imputer science tutor I aided students with class work and helped them through problems."
 		}
+		
 	]
 };
 
 var education = {
 	"schools": [
-		{ "name": "University of Windsor",
+		{ "name": "St Joseph's University",
 			"datesAttended": "1996 - 2001",
 			"location": "Windsor, Ontario, Canada",
 			"degree": "B.Sc.(Hon) Software Engineering",
