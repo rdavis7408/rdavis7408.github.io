@@ -1,10 +1,3 @@
-
-
-
-
-$("#header").prepend(formattedName);
-$("#header").append(formattedRole);
-
 var skills = [
   "Python", "R Language", "Visual Basic for Applications", "SQL", "Transact SQL", "PL / SQL",
   "Tableau", "Salesforce Administration", "SQL Developer", "MS Access", "MS Excel", "MS Word", "MS PowerPoint"]
@@ -22,8 +15,9 @@ var bio = {
   "skills" : skills,
   "URL" : "https://www.linkedin.com/in/robert-davis-46a26a12"
 };
-$("#main").append(bio.name);
-$("#main").append(bio.email);
+
+
+
 
 var work = {
   "Position" : "Senior Business Analyst",
@@ -31,10 +25,7 @@ var work = {
   "Time" : "2",
   "City" : "Brentwood, TN"
   }
-$("#main").append(work.Position);
-$("#main").append(work.Employer);
-$("#main").append(work.Time);
-$("#main").append(workObject.currentCity);
+
 
 var formattedName = HTMLheaderName.replace("%data%",bio.name)
 var formattedRole = HTMLHeaderRole.replace("%data%", bio.role);
