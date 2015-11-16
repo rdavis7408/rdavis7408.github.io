@@ -1,15 +1,29 @@
+//var bio = {
+//	"name": "Robert L. Davis",
+//	"role": "Senior Business Analyst",
+//	"contacts": {
+//		"email": "rdavis7408@gmail.com",
+//		"github": "rdavis7408",
+//		"twitter": "@obertdavis",
+//		"location": "Pleasant View, TN"
+//	},
+//	"picture": "",
+//	"welcomeMessage": "Currently helping others turn data into information through reporting, visualizations and data mining",
+//	"skills": ["Python", "R Language", "Transact SQL", "PL/SQL", "Tableau", "Salesforce.com", "Visual Basics for Applications"]
+//};
+
 var bio = {
-	"name": "Robert L. Davis",
-	"role": "Senior Business Analyst",
+	"name": "Cheryl Court",
+	"role": "Software Developer",
 	"contacts": {
-		"email": "rdavis7408@gmail.com",
-		"github": "rdavis7408",
-		"twitter": "@obertdavis",
-		"location": "Pleasant View, TN"
+		"email": "cheryl.court@gmail.com",
+		"github": "cherylcourt",
+		"twitter": "@cherylcourt",
+		"location": "Edmonton, Alberta, Canada"
 	},
-	"picture": "",
-	"welcomeMessage": "Currently helping others turn data into information through reporting, visualizations and data mining",
-	"skills": ["Python", "R Language", "Transact SQL", "PL/SQL", "Tableau", "Salesforce.com", "Visual Basics for Applications"]
+	"picture": "images/me.png",
+	"welcomeMessage": "I'm currently working as a Software Developer in Edmonton, Alberta, Canada.  Thanks for stopping by!",
+	"skills": ["Java", "python", "Software Development", "Test Driven Development", "Retrospective Facilitation"]
 };
 
 var work = {
