@@ -230,8 +230,8 @@ education.display = function() {
 			$(".education-entry:last").append(formattedSchoolName + formattedSchoolDegree);
 			$(".education-entry:last").append(formattedSchoolDates);
 			$(".education-entry:last").append(formattedSchoolLocation);
-			$(".education-entry:last").append(formattedSchoolMajor);
-			$(".education-entry:last").append(formattedSchoolMinor);
+			//$(".education-entry:last").append(formattedSchoolMajor);
+			//$(".education-entry:last").append(formattedSchoolMinor);
 		}
 
 		if(education.onlineCourses.length > 0) {
