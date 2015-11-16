@@ -7,9 +7,9 @@ var bio = {
 		"twitter": "@robertdavis",
 		"location": "Pleasant View , TN"
 	},
-	"picture": "images/me.png",
-	"welcomeMessage": "I'm currently working as a Software Developer in Edmonton, Alberta, Canada.  Thanks for stopping by!",
-	"skills": ["Java", "python", "Software Development", "Test Driven Development", "Retrospective Facilitation"]
+	"picture": "images/rdavis_White_Email_Small.gif",
+	"welcomeMessage": "Currently helping others turn data into information through reporting, visualizations and data mining!",
+	"skills": ["Python", "R Language", "Transact SQL", "PL/SQL", "Tableau", "Salesforce.com", "Visual Basics for Applications"]
 };
 
 var work = {
