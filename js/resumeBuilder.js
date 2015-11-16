@@ -4,7 +4,7 @@ var bio = {
 	"contacts": {
 		"email": "rdavis7408@gmail.com",
 		"github": "rdavis7408",
-		"twitter": "@obertdavis",
+		"twitter": "@robertdavis",
 		"location": "Pleasant View, TN"
 	},
 	"picture": "",
