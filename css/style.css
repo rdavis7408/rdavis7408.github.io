@@ -154,6 +154,8 @@ img {
 
 .emailImg {
     padding: 0;
+    width: 100px;
+    height: 20px;
 }
 
 /* Bar chart stuff */
