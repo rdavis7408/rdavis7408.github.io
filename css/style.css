@@ -157,6 +157,8 @@ img {
     width: 100px;
     height: 10px;
     display: Inline;
+    font-size: 14px;
+    font-color: #ffffff
 }
 
 /* Bar chart stuff */
