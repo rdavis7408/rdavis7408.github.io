@@ -62,7 +62,7 @@ var education = {
 			"datesAttended": "1990 - 1992",
 			"location": "Philadelphia , PA",
 			"degree": "Masters of Science",
-			"concentration": "Secondary Education",
+			"major": "Secondary Education",
 			"url": "www.sju.edu"
 		},
 		{ "name": "The University of Alabama",
