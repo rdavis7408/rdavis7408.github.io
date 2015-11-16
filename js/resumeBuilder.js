@@ -9,7 +9,7 @@ var bio = {
         "URL" : "https://www.linkedin.com/in/robert-davis-46a26a12",
         "location" : "Pleasant View, TN"
   },
-  "welcomeMessage": "Creating information through reporting, visualizations, data mining and communication"
+  "welcomeMessage": "Creating information through reporting, visualizations, data mining and communication",
    
   "skills" : ["Python", "R Language", "Visual Basic for Applications", "SQL", "Transact SQL", "PL / SQL",
   "Tableau", "Salesforce Administration", "SQL Developer", "MS Access", "MS Excel", "MS Word", "MS PowerPoint"]
