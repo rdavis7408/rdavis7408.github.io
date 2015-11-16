@@ -58,14 +58,20 @@ var work = {
 
 var education = {
 	"schools": [
-		{ "name": "University of Windsor",
-			"datesAttended": "1996 - 2001",
-			"location": "Windsor, Ontario, Canada",
-			"degree": "B.Sc.(Hon) Software Engineering",
-			"major": "Computer Science",
-			"minor": "Germanic Studies",
-			"url": "www.uwindsor.ca"
-		}		
+		{ "name": "Saint Joseph's University",
+			"datesAttended": "1990 - 1992",
+			"location": "Philadelphia , PA",
+			"degree": "Masters of Science",
+			"concentration": "Secondary Education",
+			"url": "www.sju.edu"
+		},
+		{ "name": "The University of Alabama",
+			"datesAttended": "1986 - 1989",
+			"location": "Tuscaloosa , AL",
+			"degree": "Bachelor of Arts",
+			"major": "History",
+			"url": "www.ua.edu"
+		}
 	],
 	"onlineCourses": [
 		{ "school": "Udacity",
