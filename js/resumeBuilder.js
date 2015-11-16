@@ -14,7 +14,13 @@ var skills = [
 var bio = {
   "name":"Robert L. Davis",
   "role" : "Senior Business Analyst",
-  "email" :  "RDavis7408@gmail.com", 
+  "contacts" : {
+        "email" :  "RDavis7408@gmail.com",
+        "twitter" : "@robertdavis",
+        "location" : "Pleasant View, TN"
+  },
+  "welcomeMessage": "Creating information through reporting, visualizations, data mining and communication"
+   
   "skills" : skills,
   "URL" : "https://www.linkedin.com/in/robert-davis-46a26a12"
 };
@@ -32,5 +38,5 @@ $("#main").append(work.Employer);
 $("#main").append(work.Time);
 $("#main").append(workObject.currentCity);
 
-var formattedRole = HTMLskillsStart.replace("%data%", bio.skills);
-
+var formattedRole = HTMLHeaderRole.replace("%data%", bio.role);
+var formattedWelcomeMsg = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
