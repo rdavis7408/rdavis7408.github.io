@@ -16,4 +16,15 @@ var bio = {
 $("#main").append(bio.name);
 $("#main").append(bio.email);
 
+var workObject = {
+  "currentPosition" : "Senior Business Analyst",
+  "currentEmployer" : "AIG",
+  "currentTime" : "2",
+  "currentCity" : "Brentwood, TN"
+  }
+$("#main").append(workObject.currentPosition);
+$("#main").append(workObject.currentEmployer);
+$("#main").append(workObject.currentTime);
+$("#main").append(workObject.currentCity);
+
 
