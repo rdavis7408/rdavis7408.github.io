@@ -1,11 +1,11 @@
 var bio = {
-	"name": "Cheryl Court",
-	"role": "Software Developer",
+	"name": "Robert L. Davis",
+	"role": "Senior Business Analyst",
 	"contacts": {
-		"email": "cheryl.court@gmail.com",
-		"github": "cherylcourt",
-		"twitter": "@cherylcourt",
-		"location": "Edmonton, Alberta, Canada"
+		"email": "rdavis7408@gmail.com",
+		"github": "rdavis7408",
+		"twitter": "@robertdavis",
+		"location": "Pleasant View , TN"
 	},
 	"picture": "images/me.png",
 	"welcomeMessage": "I'm currently working as a Software Developer in Edmonton, Alberta, Canada.  Thanks for stopping by!",
