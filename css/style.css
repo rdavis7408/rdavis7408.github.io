@@ -157,6 +157,9 @@ img {
     width: 100px;
     height: 10px;
     display: Inline;
+
+}
+.em {
     font-size: 14px;
     color: #ffffff;
 }
