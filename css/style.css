@@ -92,10 +92,14 @@ a {
 #skillsH3 {
   color: #F5AE23;
   display: none;
+
 }
 
 #skills {
   display: none;
+  padding:15px;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .orange {
