@@ -164,8 +164,8 @@ function initializeMap() {
     })(marker,content,infowindow)); 
 
   }
-  }
-});
+  };
+
 
 
 window.addEventListener('load', initializeMap);
