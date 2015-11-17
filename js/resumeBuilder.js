@@ -79,7 +79,7 @@ var education = {
 		"years": "1990 - 1992",
 		"url": "www.sju.edu"
 	},
-		{
+	{
 		"name": "The University of Alabama",
 		"location": "Tuscaloosa, AL",
 		"degree": "Bachelor of Arts",
