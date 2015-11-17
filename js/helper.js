@@ -120,7 +120,7 @@ function initializeMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     zoom: 4,
     center: Chicago
-  })
+  });
 
   /*
   locationFinder() returns an array of every location string from the JSONs
