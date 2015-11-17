@@ -117,10 +117,11 @@ function initializeMap() {
   // <div id="map">, which is appended as part of an exercise late in the course.
   var Chicago = {lat: -41.8369, lng: 87.6847};
   //map = new google.maps.Map(document.querySelector('#map'), mapOptions);
-  map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 4,
-    center: Chicago
-  });
+  map = new google.maps.Map(document.querySelector('.map'), mapOptions);
+  //map = new google.maps.Map(document.getElementById('map'), {
+  //  zoom: 4,
+  //  center: Chicago
+  ///});
 
   /*
   locationFinder() returns an array of every location string from the JSONs
