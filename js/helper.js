@@ -25,7 +25,7 @@ var HTMLlocation = "<li class='flex-item'><span class='orange-text'>location</sp
 
 //var HTMLbioPic = "<img src='%data%' class='biopic'>";
 var HTMLbioPic = "<h3><span class='orange-text'>What I Do : </span><span class='white-text'>%data%</span></h3>";
-var HTMLWelcomeMsg = "<span class='welcome-message'>%data%</span>";
+var HTMLWelcomeMsg = "<h3><span class='welcome-message'>%data%</span></h3>";
 
 var HTMLskillsStart = "<h3 id='skillsH3'>Skills at a Glance:</h3><ul id='skills' class='flex-box'></ul>";
 var HTMLskills = "<li class='flex-item'><span class='white-text'>%data%</span></li>";
