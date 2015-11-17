@@ -58,8 +58,8 @@ var HTMLonlineDates = "<div class='date-text'>%data%</div>";
 var HTMLonlineURL = "<br><a href='#'>%data%</a>";
 
 var internationalizeButton = "<button>Internationalize</button>";
-//var googleMap = "<div id='map'></div>";
-var googleMap = "<div class='map'></div>";
+var googleMap = "<div id='map'></div>";
+//var googleMap = "<div class='map'></div>";
 
 /*
 The International Name challenge in Lesson 2 where you'll create a function that will need this helper code to run. Don't delete! It hooks up your code to the button you'll be appending.
