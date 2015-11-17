@@ -239,7 +239,8 @@ function initializeMap() {
   
 };
 locations = [ ['The University of Alabama', 33.2094,-87.5415, "0BFC53", "0BFC53"],
-              ['Saint Joseph's University', 39.9953, -75.2389, "0BFC53", "0BFC53"], ];
+              ['Saint Joseph's University', 39.9953, -75.2389, "0BFC53", "0BFC53"],
+              ];
 /*
 Uncomment all the code below when you're ready to implement a Google Map!
 */
@@ -253,11 +254,17 @@ for (i =0;i<locations.length; i++)
       latlngset = new google.maps.LatLng(lat, long);
       var img = new google.maps.MarkerImage('http://chart.apis.google.com/chart?cht=mm&chs=12x16&chco='+imageColor+','+imageColor2+',000000&ext=.png');
       var marker = new google.maps.Marker({  
-          map: map, title: pint , icon: img, position: latlngset  
+          map: map, title: point , position: latlngset  
         });
         map.setCenter(marker.getPosition())
       
     }
+google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){ 
+        return function() {
+           infowindow.setContent(content);
+           infowindow.open(map,marker);
+        };
+    })(marker,content,infowindow)); 
 // Calls the initializeMap() function when the page loads
 window.addEventListener('load', initializeMap);
 
