@@ -2,7 +2,7 @@ var bio = {
 	"name": "Robert L. Davis",
 	"role": "Senior Buisiness Analyst",
 	"contact": {
-		"mobile": "555-555-5555",
+		"mobile": "931.436.6656",
 		"email": "rdavis7408@gmail.com",
 		"github": "rdavis7408",
 		"twitter": "@robertdavis",
@@ -27,6 +27,20 @@ var work = {
 		"title": "Data Analyst",
 		"location": "Nashville, TN",
 		"dates": "2008 - 2014",
+		"description": "Develop sites for local businesses."
+	},
+		{
+		"employer": "Dillon Transportation LLC",
+		"title": "Demand Plannert",
+		"location": "Ashland City, TN",
+		"dates": "2005 - 2008",
+		"description": "Develop sites for local businesses."
+	},
+		{
+		"employer": "Ryder",
+		"title": "Logistics Engineer",
+		"location": "Ashland City, TN",
+		"dates": "2000 - 2005",
 		"description": "Develop sites for local businesses."
 	}
 	]
@@ -64,7 +78,16 @@ var education = {
 		"majors": ["Secondary Education"],
 		"years": "1990 - 1992",
 		"url": "www.sju.edu"
-	}],
+	},
+		{
+		"name": "The University of Alabama",
+		"location": "Tuscaloosa, AL",
+		"degree": "Bachelor of Arts",
+		"majors": ["History"],
+		"years": "1986 - 1989",
+		"url": "www.ua.edu"
+	}
+	],
 	"onlineCourses": [
 	{
 		"title": "Front-end Web Developer Nanodegree",
