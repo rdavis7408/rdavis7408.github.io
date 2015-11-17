@@ -379,4 +379,4 @@ $(function () {
 
 
 //$("#mapDiv").append(googleMap);
-$("#map").append(googleMap);
+$(".map").append(googleMap);
