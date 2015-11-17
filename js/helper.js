@@ -239,7 +239,7 @@ function initializeMap() {
   
 };
 locations = [ ['The University of Alabama', 33.2094,-87.5415, "0BFC53", "0BFC53"],
-              ['Saint Joseph's University', 39.9953, -75.2389, "0BFC53", "0BFC53"] ]
+              ['Saint Joseph's University', 39.9953, -75.2389, "0BFC53", "0BFC53"] ];
 /*
 Uncomment all the code below when you're ready to implement a Google Map!
 */
