@@ -5,7 +5,7 @@ var bio = {
 		"email": "rdavis7408@gmail.com",
 		"github": "rdavis7408",
 		"twitter": "@robertdavis",
-		"location": "Pleasant View , Tennessee, United States"
+		"location": "Pleasant View , TN"
 	},
 	"picture": "images/rdavis_White_Email_Small.gif",
 	"welcomeMessage": "Helping others turn data into information through reporting, visualizations and data mining!",
@@ -17,7 +17,7 @@ var work = {
 		{
 			"employer": "AIG Financial Network",
 			"title": "Senior Business Analyst",
-			"location": "Brentwood, Tennessee, United States",
+			"location": "Brentwood, TN",
 			"datesWorked": "2014 - Present",
 			"description": "My primary responsibilities involve all aspects of developing and supporting critical software " +
 				"applications in a variety of languages including Java, python, C++ and Perl in both greenfield and " +
