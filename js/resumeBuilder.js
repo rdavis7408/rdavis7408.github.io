@@ -8,7 +8,7 @@ var bio = {
 		"location": "Pleasant View , TN"
 	},
 	"picture": "",
-	"welcomeMessage": "Helping others turn data into information through reporting, visualizations and data mining!",
+	"welcomeMessage": "Turn data into information through reporting, visualizations and data mining!",
 	"skills": ["Python", "R Language", "Transact SQL", "PL/SQL", "Tableau", "Salesforce.com", "Visual Basics for Applications"]
 };
 
