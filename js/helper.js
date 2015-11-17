@@ -180,6 +180,8 @@ function initializeMap() {
 
     // hmmmm, I wonder what this is about...
     google.maps.event.addListener(marker, 'click', function() {
+        map.setZoom(8);
+        map.setCenter(marker.getPosition());
       // your code goes here!
     });
 
