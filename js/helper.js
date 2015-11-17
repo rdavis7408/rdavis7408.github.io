@@ -106,10 +106,11 @@ var map;    // declares a global map variable
 /*
 Start here! initializeMap() is called when page is loaded.
 */
-function initializeMap() {
     <script async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUuHULNZaAF1_bDfR1ga2Jn6po_RcxwUg&callback=initMap">
     </script>
+function initializeMap() {
+
   var locations;        
 
   var mapOptions = {
