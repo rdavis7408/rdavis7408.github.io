@@ -378,5 +378,5 @@ $(function () {
 });
 
 
-//$("#mapDiv").append(googleMap);
-$(".map").append(googleMap);
+$("#mapDiv").append(googleMap);
+//$(".map").append(googleMap);
