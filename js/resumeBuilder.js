@@ -183,7 +183,7 @@ projects.display = function() {
 }
 
 education.display = function() {
-
+    if(education.schools.length > 0 || education.onlineCourses.length > 0){
 	$("#education").append(HTMLschoolStart);
 	for (i in education.schools){
 			$("#education").append(HTMLschoolStart);
@@ -207,7 +207,8 @@ education.display = function() {
  		$(".education-entry").append(HTMLonlineDates.replace("%data%", education.onlineCourses[onlineClass].date));
  		$(".education-entry").append(HTMLonlineURL.replace("%data%", education.onlineCourses[onlineClass].url));
  	}
- } 
+     } 
+ }
 
 
 bio.display();
