@@ -7,7 +7,7 @@ var bio = {
 		"twitter": "@robertdavis",
 		"location": "Pleasant View , TN"
 	},
-	"picture": "images/rdavis_White_Email_Small.gif",
+	"picture": "",
 	"welcomeMessage": "Helping others turn data into information through reporting, visualizations and data mining!",
 	"skills": ["Python", "R Language", "Transact SQL", "PL/SQL", "Tableau", "Salesforce.com", "Visual Basics for Applications"]
 };
