@@ -70,34 +70,33 @@ var projects = {
 };
 
 var education = {
-	"schools": [
-	{
-		"name": "Saint Joseph\'s University",
-		"location": "Philadelphia, PA",
-		"degree": "Masters of Science",
-		"major": "Secondary Education",
-		"datesAttended": "1990 - 1992",
-		"url": "www.sju.edu"
-	},
-	{
-		"name": "The University of Alabama",
-		"location": "Tuscaloosa, AL",
-		"degree": "Bachelor of Arts",
-		"major": "History",
-		"datesAttended": "1986 - 1989",
-		"url": "www.ua.edu"
-	}
-	],
-	"onlineCourses": [
-	{
-		"title": "Front-end Web Developer Nanodegree",
-		"school": "Udacity",
-		"completed": "2015",
-		"url": "www.udacity.com"
-	}
-	]
-};
-
+ 	"schools": [
+ 	{
+ 		"name": "Saint Joseph\'s University",
+ 		"location": "Philadelphia, PA",
+ 		"degree": "Masters of Science",
+ 		"major": "Secondary Education",
+ 		"datesAttended": "1990 - 1992",
+ 		"url": "www.sju.edu"
+ 	},
+ 	{
+ 		"name": "The University of Alabama",
+ 		"location": "Tuscaloosa, AL",
+ 		"degree": "Bachelor of Arts",
+ 		"major": "History",
+ 		"datesAttended": "1986 - 1989",
+ 		"url": "www.ua.edu"
+ 	}
+ 	],
+ 	"onlineCourses": [
+ 	{
+ 		"title": "Front-end Web Developer Nanodegree",
+ 		"school": "Udacity",
+ 		"date": "2015",
+ 		"url": "www.udacity.com"
+ 	}
+ 	]
+ };
 
 bio.display = function() {
 	$("#header").prepend(HTMLheaderRole.replace("%data%", bio.role));
