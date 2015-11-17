@@ -5,7 +5,7 @@ var bio = {
 		"email": "rdavis7408@gmail.com",
 		"github": "rdavis7408",
 		"twitter": "@robertdavis",
-		"location": "Pleasant View , TN"
+		"location": "Pleasant View, Tennessee, United States "
 	},
 	"picture": "",
 	"welcomeMessage": "Turn data into information through reporting, visualizations and data mining!",
@@ -17,7 +17,7 @@ var work = {
 		{
 			"employer": "AIG Financial Network",
 			"title": "Senior Business Analyst",
-			"location": "Brentwood, TN",
+			"location": "Brentwood, Tennessee, United States",
 			"datesWorked": "2014 - Present",
 			"description": "My primary responsibilities involve all aspects of developing and supporting critical software " +
 				"applications in a variety of languages including Java, python, C++ and Perl in both greenfield and " +
@@ -29,7 +29,7 @@ var work = {
 		{
 			"employer": "Discovery Communications",
 			"title": "Data Analyst",
-			"location": "Nashville, TN",
+			"location": "Nashville, Tennessee, United States",
 			"datesWorked": "2008 - 2014",
 			"description": "I worked in a few different capacities here from internal application support of " +
 			"internal users using third party customized applications to working on internal software applications " +
@@ -39,7 +39,7 @@ var work = {
 		{
 			"employer": "Dillon Transportation",
 			"title": "Demand Planner",
-			"location": "Ashland City , TN",
+			"location": "Ashland City, Tennessee, United States",
 			"datesWorked": "2005 - 2008",
 			"description": "I developed software for external clients in a variety of languages including C#.  This " +
 			"included design, development and deployment of back end systems as well as front end graphical user interfaces."
@@ -47,7 +47,7 @@ var work = {
 		{
 			"employer": "Ryder",
 			"title": "Logistics Engineer",
-			"location": "Ashland City , TN",
+			"location": "Ashland City, Tennessee, United States",
 			"datesWorked": "2000 - 2005",
 			"description": "I supervised labs for the second year advanced programming class in C as a teaching " +
 			"assisstant.  At the University Computer Centre I helped students with use of the computing resources " +
