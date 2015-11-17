@@ -99,9 +99,7 @@ This is the fun part. Here's where we generate the custom Google Map for the web
 See the documentation below for more details.
 https://developers.google.com/maps/documentation/javascript/reference
 */
-<script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUuHULNZaAF1_bDfR1ga2Jn6po_RcxwUg&callback=initMap">
-</script>
+
 var map;    // declares a global map variable
 
 
