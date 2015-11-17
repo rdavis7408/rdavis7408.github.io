@@ -1,32 +1,32 @@
 var bio = {
-	"name": "Jeremy Shanks",
-	"role": "Front-end Web Developer",
+	"name": "Robert L. Davis",
+	"role": "Senior Buisiness Analyst",
 	"contact": {
 		"mobile": "555-555-5555",
-		"email": "jshanks24@gmail.com",
-		"github": "jshanks24",
-		"twitter": "jeremy_shanks",
-		"location": "East TN"
+		"email": "rdavis7408@gmail.com",
+		"github": "rdavis7408",
+		"twitter": "@robertdavis",
+		"location": "Pleasant View, TN"
 	},
 	"biopic": "",
-	"welcomeMessage": "Welcome to my site",
-	"skills": ["HTML", "CSS", "Javascript", "AngularJS", "KnockoutJS", "jQuery", "PHP", "Wordpress", "Bootstrap", "Sublime Text", "Mac OS X", "Linux"]
+	"welcomeMessage": "Turning data into information, visualizations, and reporting",
+	"skills": ["Python", "R Language", "Transact SQL", "PL / SQL", "Tableau", "Salesforce", "Visual Basic for Applications"]
 };
 
 var work = {
 	"jobs": [
 	{
-		"employer": "Havco",
-		"title": "Dry Kiln Operator",
-		"location": "East TN",
-		"dates": "2015-present",
+		"employer": "AIG",
+		"title": "Senior Business Analyst",
+		"location": "Brentwood, TN",
+		"dates": "2014 - present",
 		"description": "Control dry kilns to ensure lumber dries properly."
 	},
 	{
-		"employer": "Shanks Web Services",
-		"title": "Freelance Web Developer",
-		"location": "East TN",
-		"dates": "2014-2014",
+		"employer": "Discovery Communications",
+		"title": "Data Analyst",
+		"location": "Nashville, TN",
+		"dates": "2008 - 2014",
 		"description": "Develop sites for local businesses."
 	}
 	]
@@ -58,12 +58,12 @@ var projects = {
 var education = {
 	"schools": [
 	{
-		"name": "American InterContinental University",
-		"location": "Schaumburg, IL",
-		"degree": "Associates of Business Management",
-		"majors": ["Information Systems"],
-		"years": "2012",
-		"url": "www.example.com"
+		"name": "Saint Joseph\'s University",
+		"location": "Philadelphia, PA",
+		"degree": "Masters of Science",
+		"majors": ["Secondary Education"],
+		"years": "1990 - 1992",
+		"url": "www.sju.edu"
 	}],
 	"onlineCourses": [
 	{
