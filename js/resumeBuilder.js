@@ -8,7 +8,7 @@ var bio = {
 		"twitter": "jeremy_shanks",
 		"location": "East TN"
 	},
-	"biopic": "images/Portfolio_Image_BW.jpg",
+	"biopic": "",
 	"welcomeMessage": "Welcome to my site",
 	"skills": ["HTML", "CSS", "Javascript", "AngularJS", "KnockoutJS", "jQuery", "PHP", "Wordpress", "Bootstrap", "Sublime Text", "Mac OS X", "Linux"]
 };
