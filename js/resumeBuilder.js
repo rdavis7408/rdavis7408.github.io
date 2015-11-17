@@ -203,7 +203,7 @@ education.display = function() {
 	}
 	if(education.onlineCourses.length > 0) {
 	   $("#education").append(HTMLonlineClasses);
-             for (onlineClass in education.onlineCourses){
+             for (i in education.onlineCourses){
              	$("#education").append(HTMLschoolStart);
              	var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[i].title).replace("#", education.onlineCourses[i].url);
  		var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[i].school);
