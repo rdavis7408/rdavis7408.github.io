@@ -238,30 +238,11 @@ function initializeMap() {
   pinPoster(locations);
   
 };
-  <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUuHULNZaAF1_bDfR1ga2Jn6po_RcxwUg&callback=initMap">
-    </script>
-locations = [ ['The University of Alabama', 33.2094,-87.5415, "0BFC53", "0BFC53"],
-              ['Saint Joseph's University', 39.9953, -75.2389, "0BFC53", "0BFC53"]
-              ];
+  
 /*
 Uncomment all the code below when you're ready to implement a Google Map!
 */
-for (i =0;i<locations.length; i++)
-    {
-      var point = locations[i][0]
-      var lat = locations[i][1]
-      var long = locations[i][2]
-      var imageColor = locations[i][3]
-      var imageColor = locations[i][4]
-      latlngset = new google.maps.LatLng(lat, long);
-      var img = new google.maps.MarkerImage('http://chart.apis.google.com/chart?cht=mm&chs=12x16&chco='+imageColor+','+imageColor2+',000000&ext=.png');
-      var marker = new google.maps.Marker({  
-          map: map, title: point , position: latlngset  
-        });
-        map.setCenter(marker.getPosition())
-      
-    }
+
 google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){ 
         return function() {
            infowindow.setContent(content);
