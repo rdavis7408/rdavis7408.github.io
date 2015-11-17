@@ -120,10 +120,7 @@
    // <div id="map">, which is appended as part of an exercise late in the course.
   // map = new google.maps.Map(document.querySelector('#map'), mapOptions);
   
-  map = new google.maps.Map(document.querySelector('#map'),{
-      center: new google.maps.LatLng(36.38, -87.11),
-      zoom:4
- });
+  map = new google.maps.Map(document.querySelector('#map'), mapOptions);
  
    /*
    locationFinder() returns an array of every location string from the JSONs
@@ -244,12 +241,7 @@
  Uncomment all the code below when you're ready to implement a Google Map!
  */
  
- google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){ 
-         return function() {
-            infowindow.setContent(content);
-            infowindow.open(map,marker);
-         };
-     })(marker,content,infowindow)); 
+
  // Calls the initializeMap() function when the page loads
  window.addEventListener('load', initializeMap);
  
