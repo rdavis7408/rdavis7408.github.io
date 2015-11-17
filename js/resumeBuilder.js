@@ -378,4 +378,4 @@ $(function () {
 });
 
 
-$("#mapDiv").append("googleMap");
+$("#mapDiv").append(googleMap);
