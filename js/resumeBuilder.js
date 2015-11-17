@@ -201,7 +201,13 @@ education.display = function() {
  			$(".education-entry:last").append(formattedSchoolMajor);
  			//$(".education-entry:last").append(formattedSchoolMinor);
 	}
-              
+             for (onlineClass in education.onlineCourses){
+ 		$(".education-entry").append(HTMLonlineTitle.replace("%data%", education.onlineCourses[onlineClass].title));
+ 		$(".education-entry").append(HTMLonlineSchool.replace("%data%", education.onlineCourses[onlineClass].school));
+ 		$(".education-entry").append(HTMLonlineDates.replace("%data%", education.onlineCourses[onlineClass].date));
+ 		$(".education-entry").append(HTMLonlineURL.replace("%data%", education.onlineCourses[onlineClass].url));
+ 	}
+ } 
 
 
 bio.display();
