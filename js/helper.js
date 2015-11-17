@@ -120,7 +120,7 @@
    // <div id="map">, which is appended as part of an exercise late in the course.
   // map = new google.maps.Map(document.querySelector('#map'), mapOptions);
   
-  map = new google.maps.Map(document.querySelector('#map'),{
+  map = new google.maps.Map(document.querySelector('#mapDiv'),{
       center: new google.maps.LatLng(36.38, -87.11),
       zoom:4
  });
