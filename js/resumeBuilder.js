@@ -213,7 +213,7 @@ education.display = function() {
  		$(".education-entry:last").append(formattedOnlineTitle + formattedOnlineSchool);
  		$(".education-entry:last").append(formattedOnlineDates);
  		$(".education-entry:last").append(formattedOnlineURL);
-                } 
+                 
         }
     };
 
