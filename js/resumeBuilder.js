@@ -378,4 +378,5 @@ $(function () {
 });
 
 
-$("#mapDiv").append(googleMap);
+//$("#mapDiv").append(googleMap);
+$("#map").append(googleMap);
