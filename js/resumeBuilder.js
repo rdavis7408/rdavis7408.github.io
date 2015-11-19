@@ -116,7 +116,9 @@ bio.display = function() {
 	$("#topContacts").append(HTMLlocation.replace("%data%", bio.contact.location));
 
 	$("#header").append(HTMLbioPic.replace("%data%", bio.biopic));
-
+        
+        $("#header").append(HTMLsummary.replace("%data%", bio.summary));
+        
 	if (bio.skills.length > 0) {
 		$('#header').append(HTMLskillsStart);
 
@@ -131,7 +133,7 @@ bio.display = function() {
 		$('#skills').append(formattedSkill); */
 	}
 	
-	$("#header").append(HTMLsummary.replace("%data%", bio.summary));
+	
 	
 	$("#footerContacts").append(HTMLmobile.replace("%data%", bio.contact.mobile));
 
