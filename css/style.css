@@ -188,7 +188,7 @@ img {
     
 }
 .summaryDiv {
-    display: inline;
+    display: block;
     float: left;
     width: 20%;
     flex-wrap: wrap;
