@@ -131,6 +131,8 @@ bio.display = function() {
 		$('#skills').append(formattedSkill); */
 	}
 	
+	$("#header").append(HTMLgithub.replace("%data%", bio.summary));
+	
 	$("#footerContacts").append(HTMLmobile.replace("%data%", bio.contact.mobile));
 
 	$("#footerContacts").append(HTMLemail.replace("%data%", bio.contact.email));
