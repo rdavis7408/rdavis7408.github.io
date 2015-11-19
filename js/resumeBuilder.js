@@ -14,7 +14,7 @@ var bio = {
 	
 	"skills": ["Python", "R Language", "Transact SQL", "PL / SQL", "Tableau", "Salesforce Administration", "Visual Basic for Applications"],
 
-        "applications": ["SQL Server Management Studio", "PyCharm", "Oracle SQL Developer", "Salesforce.com", "MS Excel", "R Studio", "MS Access", "JIRA", "MS Word", "MS PowerPoint", "Tableau","MySQL Workbench"];
+        "applications": ["SQL Server Management Studio", "PyCharm", "Oracle SQL Developer", "Salesforce.com", "MS Excel", "R Studio", "MS Access", "JIRA", "MS Word", "MS PowerPoint", "Tableau","MySQL Workbench"]
 };
 var work = {
 	"jobs": [
