@@ -182,6 +182,7 @@ img {
 #summary {
     width:200 ;
     display: inline;
+    float: center;
 }
 
 span {
