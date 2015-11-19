@@ -25,7 +25,7 @@ var HTMLwelcomeMsg = '<span class="welcome-message">%data%</span>';
 
 var HTMLskillsStart = '<div id=skillDiv><h3 id="skillsH3">Skills at a Glance:</h3><ul id="skills" class="flex-box"></ul>';
 var HTMLskills = '<li class="flex-item"><span class="white-text">%data%</span></li></div>';
-var HTMLsummary = '<div id=summary class='flex-box'><h3>Summary :</h3><br><br><br><br><span class="white-text">%data%</span></div>';
+var HTMLsummary = '<div id=summary><h3 text-color=#F5AE23>Summary :</h3><br><br><br><br><span class="white-text">%data%</span></div>';
 
 var HTMLworkStart = '<div class="work-entry"></div>';
 var HTMLworkEmployer = '<a href="#">%data%';
