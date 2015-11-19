@@ -20,7 +20,7 @@ var work = {
 		"title": "Senior Business Analyst",
 		"location": "Brentwood, TN",
 		"dates": "2014 - present",
-		"description": "Control dry kilns to ensure lumber dries properly."
+		"description": "Gathering of business requirements for visualizations and reporting. Creation of standardized and ad hoc reporting using SQL, Visual Basic for Applications, Tableau, Python, MS Access, MS Excel, and Oracle SQL Developer Tool. Design and implementation of visualizations and dashboards using Tableau. Creation of Visual Basic for Applications Macros and Python to automate repetitive tasks to ensure accuracy and standardization of reports."
 	},
 	{
 		"employer": "Discovery Communications",
