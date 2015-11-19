@@ -195,7 +195,7 @@ img {
 }
 
 .skillDiv {
-    display: block;
+    display: inline;
     flex-wrap: wrap;
 }
 
