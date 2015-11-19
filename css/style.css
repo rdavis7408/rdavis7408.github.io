@@ -187,6 +187,9 @@ img {
     
     
 }
+.summaryDiv {
+    display: inline;
+}
 
 span {
   padding: 5px;
