@@ -12,9 +12,9 @@ var bio = {
 	"welcomeMessage": "Turning data into information, visualizations, and reporting",
 	"summary": "Over six years of experience as a Data Analyst and Senior Business Analyst supporting Fortune 500 firms' operation. Experience working across disparate data sources to synthesize data for project and organizational goals. Research, analyze and capture sales trends, key performance indicators, web usage data, operational processes and cross-functional relationships. As part of a team, providing weekly progress reports and being autonomous to self-direct individual efforts. ",
 	
-	"skills": ["Python", "R Language", "Transact SQL", "PL / SQL", "Tableau", "Salesforce Administration", "Visual Basic for Applications"],
+	"skills": ["Python", "R Language", "Transact SQL", "PL / SQL", "Tableau", "Salesforce Administration", "Visual Basic for Applications"]
 
-        "applications": ["SQL Server Management Studio", "PyCharm", "Oracle SQL Developer", "Salesforce.com", "MS Excel", "R Studio", "MS Access", "JIRA", "MS Word", "MS PowerPoint", "Tableau","MySQL Workbench"]
+       
 };
 var work = {
 	"jobs": [
