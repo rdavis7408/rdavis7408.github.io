@@ -194,6 +194,11 @@ img {
     flex-wrap: wrap;
 }
 
+.skillDiv {
+    display: block;
+    flex-wrap: wrap;
+}
+
 span {
   padding: 5px;
 }
