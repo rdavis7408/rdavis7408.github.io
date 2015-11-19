@@ -155,6 +155,8 @@ ul {
   width: 200px;
   display: inline;
   border-radius: 40px;
+  -moz-border-radius: 40px; 
+  -webkit-border-radius: 40px; 
 }
 
 img {
