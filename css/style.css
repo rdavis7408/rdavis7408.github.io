@@ -189,6 +189,8 @@ img {
 }
 .summaryDiv {
     display: inline;
+    float: left;
+    width: 20%;
 }
 
 span {
