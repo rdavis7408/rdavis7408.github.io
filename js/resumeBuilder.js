@@ -8,7 +8,7 @@ var bio = {
 		"twitter": "@robertdavis",
 		"location": "Pleasant View, TN"
 	},
-	"biopic": "",
+	"biopic": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAASWAAAAJDg3ZTI5NmY2LWU5YTAtNDNlOC1iZDExLWU5NjZlYjMyMmVlNQ.jpg",
 	"welcomeMessage": "Turning data into information, visualizations, and reporting",
 	"skills": ["Python", "R Language", "Transact SQL", "PL / SQL", "Tableau", "Salesforce", "Visual Basic for Applications"]
 };
