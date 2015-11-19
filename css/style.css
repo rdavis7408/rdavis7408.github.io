@@ -155,7 +155,7 @@ ul {
   padding: 10px;
   width: 150px;
   height: 150px;
-  display: inline;
+  display: none;
   border-radius: 90px;
   -moz-border-radius: 90px; 
   -webkit-border-radius: 90px; 
