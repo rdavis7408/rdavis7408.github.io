@@ -178,6 +178,11 @@ img {
   display: inline-block;
 }
 
+.summary {
+    width:200
+    display: inline;
+}
+
 span {
   padding: 5px;
 }
