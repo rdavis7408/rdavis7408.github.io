@@ -37,7 +37,7 @@ var work = {
 		"title": "Demand Planner",
 		"location": "Ashland City, TN",
 		"dates": "2005 - 2008",
-		"description": "Develop sites for local businesses."
+		"description": "Created reporting using AS400 Sequel to manage daily truck volume. Negotiated with brokers and logistics firms both rate and capacity. Developed and maintained customer volume reporting. Created and maintained two ten user networks and email."
 	},
 		{
 		"employer": "Ryder",
