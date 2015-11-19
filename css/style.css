@@ -178,7 +178,7 @@ img {
   display: inline-block;
 }
 
-.summary {
+#summary {
     width:200
     display: inline;
 }
