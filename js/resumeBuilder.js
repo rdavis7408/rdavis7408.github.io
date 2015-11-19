@@ -44,7 +44,7 @@ var work = {
 		"title": "Logistics Engineer",
 		"location": "Ashland City, TN",
 		"dates": "2000 - 2005",
-		"description": "Click to edit position descriptionImplemented a consolidated traffic center for a client with annual transportation purchases in excess of 40 million dollars. Analyzed payment data to optimize distribution center locations, carrier base, and total cost analysis of the client’s network using MS Excel and MS Access. Designed, and implemented multi-user Access Database to manage shipment flow. Maintained network and troubleshooting for all technology related issues."
+		"description": "Implemented a consolidated traffic center for a client with annual transportation purchases in excess of 40 million dollars. Analyzed payment data to optimize distribution center locations, carrier base, and total cost analysis of the client’s network using MS Excel and MS Access. Designed, and implemented multi-user Access Database to manage shipment flow. Maintained network and troubleshooting for all technology related issues."
 	}
 	]
 };
