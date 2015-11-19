@@ -100,7 +100,7 @@ a {
   padding:15px;
   padding-left: 10%;
   padding-right: 10%;
-  list-style-position: inside
+  
   
 }
 
@@ -199,6 +199,7 @@ img {
     display: block;
     flex-wrap: wrap;
     float: left;
+    list-style-position: inside
 }
 
 span {
