@@ -197,6 +197,7 @@ img {
 .skillDiv {
     display: inline;
     flex-wrap: wrap;
+    float: left;
 }
 
 span {
