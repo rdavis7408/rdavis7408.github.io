@@ -191,6 +191,7 @@ img {
     display: inline;
     float: left;
     width: 20%;
+    flex-wrap: wrap;
 }
 
 span {
