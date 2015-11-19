@@ -154,9 +154,9 @@ ul {
   padding: 10px;
   width: 200px;
   display: inline;
-  border-radius: 40px;
-  -moz-border-radius: 40px; 
-  -webkit-border-radius: 40px; 
+  border-radius: 50px;
+  -moz-border-radius: 50px; 
+  -webkit-border-radius: 50px; 
 }
 
 img {
