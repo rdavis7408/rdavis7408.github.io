@@ -30,11 +30,11 @@ var work = {
 		"title": "Data Analyst",
 		"location": "Nashville, TN",
 		"dates": "2008 - 2014",
-		"description": "Develop sites for local businesses."
+		"description": "Creation of SQL Queries for ad hoc and customized reporting. Data Manipulation of customer data for updating MySQL database. Creating entries to allow customer access to web products. Testing new products for operational readiness. Use Tableau to create reports, dashboards and visualizations for senior management and customer presentations. Administer Salesforce.com for sales organization to include development of workflow rules, profile and role creation, validation rules and general daily operations. Create scripts with R to automate reporting to customers and senior management with ODBC to MySQL Databases."
 	},
 		{
 		"employer": "Dillon Transportation LLC",
-		"title": "Demand Plannert",
+		"title": "Demand Planner",
 		"location": "Ashland City, TN",
 		"dates": "2005 - 2008",
 		"description": "Develop sites for local businesses."
