@@ -181,7 +181,7 @@ img {
 }
 
 #summary {
-    width:33 ;
+    width:33%;
     display: inline;
     float: left;
 }
