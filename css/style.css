@@ -154,7 +154,7 @@ ul {
   padding: 10px;
   width: 200px;
   display: inline;
-  webkit-border-radius: 40px;
+  border-radius: 40px;
 }
 
 img {
