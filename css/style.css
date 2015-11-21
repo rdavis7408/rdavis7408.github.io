@@ -185,6 +185,8 @@ img {
     width:50%;
     display: inline;
     float: left;
+    padding-left: 15%;
+    padding-right: 15%;
     
     
 }
