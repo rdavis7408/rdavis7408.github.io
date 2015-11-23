@@ -2,9 +2,9 @@ __author__ = 'Davisr'
 import csv
 import math
 import cx_Oracle
-v_Schema                = 'davisr'
-v_Password              = 'June4May$'
-v_ODBCConnection        = '@omimd001'
+v_Schema                = 'xxxxxxxx'
+v_Password              = 'xxxxxx'
+v_ODBCConnection        = '@DB001'
 v_AgtZipCodeArray       =  []
 v_AgentDetailArray      =  []
 v_ZipArray              =  []
