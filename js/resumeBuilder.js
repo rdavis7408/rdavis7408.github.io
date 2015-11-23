@@ -69,7 +69,7 @@ var projects = {
 		"title": "Create Mass KPI Emails with Python",
 		"completed": "2015",
 		"description": "Using Python and the win32com 200 KPI spreadsheets are open values read to whom to send the emails, email subjects and content are read in and a pdf created for each receipient and their supervisor.",
-		"images": ['images/udacity-portfolio-site_small.jpg'],
+		"images": ['images/Python_script_send_comp.jpg'],
 		"url": "Script_to_send_KPIs.txt"
 	}
 	]
