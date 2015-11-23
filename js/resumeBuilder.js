@@ -63,7 +63,7 @@ var projects = {
 		"dates": "2015",
 		"description": "A Python Script that calculates the distance from sales representative to sales lead zip codes and keeps those pairs that are within 30 miles. ",
 		"images": ['images/genesiskickstart_tksmall.jpg'],
-		"url": "Script_for_zip_code_distance.html"
+		"url": "Script_for_zip_code_distance.txt"
 	},
 	{
 		"title": "Udacity Portfolio",
