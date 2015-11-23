@@ -63,7 +63,7 @@ var projects = {
 		"dates": "2015",
 		"description": "A Python Script that calculates the distance from sales representative to sales lead zip codes and keeps those pairs that are within 30 miles. ",
 		"images": ['images/Python_Zip_Code_Pic.png'],
-		"url": "Script_for_zip_code_distance.html"
+		"url": "Script_for_zip_code_distance.txt"
 	},
 	{
 		"title": "Udacity Portfolio",
@@ -184,9 +184,12 @@ projects.display = function() {
 
 		if (projects.projects[project].images.length > 0) {
 			for (image in projects.projects[project].images) {
-				var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
+				var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]).replace'#', projects.images[image].url);
 				$(".project-entry:last").append(formattedImage);
+			        
+				
 			}
+			
 		}
 	}
 }
