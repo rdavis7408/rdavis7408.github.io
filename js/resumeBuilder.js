@@ -55,7 +55,7 @@ var projects = {
 		"title": "Daily HTML Report",
 		"dates": "2014",
 		"description": "Using the R Language and the googleVis and RHTML libraries created a process using BAT file, ODBC to MySQL Database to update customer with daily reporting.",
-		"images": ['images/genesiskickstart_tksmall.jpg'],
+		"images": ['images/Answer_Record_Count_Pic.png'],
 		"url": "R_Dash_example.html"
 	},
 	{
