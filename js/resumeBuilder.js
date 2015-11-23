@@ -71,6 +71,13 @@ var projects = {
 		"description": "Using Python and the win32com 200 KPI spreadsheets are open values read to whom to send the emails, email subjects and content are read in and a pdf created for each receipient and their supervisor.",
 		"images": ['images/Python_script_send_comp.jpg'],
 		"url": "Script_to_send_KPIs.txt"
+	},
+	{
+		"title": "Tableau Map",
+		"dates": "2014",
+		"description": "Using Python and the win32com 200 KPI spreadsheets are open values read to whom to send the emails, email subjects and content are read in and a pdf created for each receipient and their supervisor.",
+		"images": ['images/Python_script_send_comp.jpg'],
+		"url": "Script_to_send_KPIs.txt"
 	}
 	]
 };
