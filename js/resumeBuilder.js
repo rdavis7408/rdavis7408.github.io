@@ -59,11 +59,11 @@ var projects = {
 		"url": "R_Dash_example.html"
 	},
 	{
-		"title": "Genesis Kickstart",
+		"title": "Python Script to Calculate Lead Distance",
 		"dates": "2015",
-		"description": "Web application used to build Wordpress themes for the Genesis Framework.",
+		"description": "A Python Script that calculates the distance from sales representative to sales lead zip codes and keeps those pairs that are within 30 miles. ",
 		"images": ['images/genesiskickstart_tksmall.jpg'],
-		"url": "R_Dash_example.html"
+		"url": "Script_for_zip_code_distance.htm"
 	},
 	{
 		"title": "Udacity Portfolio",
