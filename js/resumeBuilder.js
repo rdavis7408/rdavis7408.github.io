@@ -52,10 +52,10 @@ var work = {
 var projects = {
 	"projects": [
 	{
-		"title": "Daily HTML Repor",
+		"title": "Daily HTML Report",
 		"dates": "2014",
-		"description": "Using the R Language and the googleVis and RHTML libraries created a process using BAT file, ODBC to MySQL Database to update customer with daily reporting",
-		"images": ["<a href= "]
+		"description": "Using the R Language and the googleVis and RHTML libraries created a process using BAT file, ODBC to MySQL Database to update customer with daily reporting.",
+		"images": ["<a href= R_Dash_example.html>Report Example</a>"]
 	},
 	{
 		"title": "Genesis Kickstart",
