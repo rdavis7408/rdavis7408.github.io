@@ -1,0 +1,129 @@
+__author__ = 'Davisr'
+import csv
+import math
+import cx_Oracle
+v_Schema                = 'xxxxxxxx'
+v_Password              = 'xxxxxx'
+v_ODBCConnection        = '@DB001'
+v_AgtZipCodeArray       =  []
+v_AgentDetailArray      =  []
+v_ZipArray              =  []
+v_ZipLatitude           =  []
+v_ZipLongitude          =  []
+v_ZipCity               =  []
+v_ZipState              =  []
+v_ZipSets               =  []
+v_ZipSetsLess31         =  []
+#variable that determines the max distance between zip codes
+v_MaxDistance           =  30
+counter                 =  1
+v_OracleSignIn          = v_Schema+'/'+v_Password+v_ODBCConnection
+v_Connection               = cx_Oracle.connect(v_OracleSignIn)
+v_Cursor                   = v_Connection.cursor()
+v_InputPath                = "C:\\Users\\davisr\\Downloads\\ZipCodes\\"
+v_InputFile                = v_InputPath+"free-zipcode-database-Primary.csv"
+#file from the following URL: http://federalgovernmentzipcodes.us/
+v_OutputPath               = "P:\\Allshare\\Travis\\"
+# v_OutputPath               = "C:\\Users\\davisr\\Desktop\\"
+v_OutputFile               = v_OutputPath+"agent_zip_code_file.csv"
+v_SQLStatementCreateTbl8 = ("CREATE TABLE "+v_Schema+".tbl_08_SalesAgents_ZipCodes AS "
+                                           "SELECT t041.empl_svc_num , "
+                                                  "t041.agt_stat_cd , "
+                                                  "t041.agt_ctrct_cd , "
+                                                  "t041.home_city , "
+                                                  "t041.home_st , "
+                                                  "t041.home_zip_cd  "
+                                           "FROM mim.omimt041_agt t041 "
+                                           "WHERE t041.agt_ctrct_cd IN ('10','14') "
+                                           "AND t041.agt_stat_cd = 'A' ")
+v_SQLStatementDropTbl8 = ("DROP TABLE  "+v_Schema+".tbl_08_SalesAgents_ZipCodes " )
+v_SQLStatementSelectTbl8_1 = ("SELECT DISTINCT(tbl_8.home_zip_cd) AS agt_zip_cd "
+                            "FROM "+v_Schema+".tbl_08_SalesAgents_ZipCodes tbl_8 ")
+v_SQLStatementSelectTbl8_2 =("SELECT tbl_8. empl_svc_num , "
+                                    "tbl_8.home_zip_cd "
+                             "FROM "+v_Schema+".tbl_08_SalesAgents_ZipCodes tbl_8 " )
+def calculate_distance(lat1, lon1, lat2, lon2):
+    if (lat1 == lat2) and  (lon1 == lon2):
+        return 0
+    else:
+        if (not lat1) or (not lon1) or (not lat2) or (not lon2):
+                return -1
+
+        lat1 = float(lat1) * math.pi/180
+        lon1 = float(lon1) * math.pi/180
+        lat2 = float(lat2) * math.pi/180
+        lon2 = float(lon2) * math.pi/180
+
+        return 3959.0 * math.acos(math.sin(lat1)*math.sin(lat2) + math.cos(lat1)*math.cos(lat2)*math.cos(lon2-lon1))
+
+#Above function changed from the following URL: http://iamtgc.com/geocoding-with-python/ with the exception of the
+#first if statement to check for the same zip code
+try:
+    v_Cursor.execute(v_SQLStatementCreateTbl8)
+    v_Connection.commit()
+except:
+    v_Cursor.execute(v_SQLStatementDropTbl8)
+    v_Cursor.execute(v_SQLStatementCreateTbl8)
+    v_Connection.commit()
+v_Cursor.execute(v_SQLStatementSelectTbl8_1)
+v_Connection.commit()
+#get the Agt Data into an array
+for results in v_Cursor.fetchall():
+    v_AgtZipCodeArray.append(results[0])
+v_AllZipsFile = csv.DictReader(open(v_InputFile))
+#read Zip code file into an array
+for row in v_AllZipsFile:
+    v_ZipArray.append(row["Zipcode"])
+    v_ZipLatitude.append(row["Lat"])
+    v_ZipLongitude.append(row["Long"])
+    v_ZipCity.append(row["City"])
+    v_ZipState.append(row["State"])
+#get the longitude and latitude of a zip code by looping through zip code file
+for i in range(len(v_AgtZipCodeArray)):
+    for j in range(len(v_ZipArray)):
+        if v_AgtZipCodeArray[i] == v_ZipArray[j]:
+            #Agent zip code [0], Agent Zip City [1], Agent Zip State [2], Agent Latitude [3] , Agent Longitude [4]
+            v_ZipSets.append([v_AgtZipCodeArray[i] , v_ZipCity[j], v_ZipState[j], v_ZipLatitude[j], v_ZipLongitude[j] ])
+#get a list of zip codes from MIMs that are not in the zip code file.
+for i in range(len(v_AgtZipCodeArray)):
+    InArray = v_AgtZipCodeArray[i] not in v_ZipArray
+    if InArray == True :
+        print v_AgtZipCodeArray[i]
+#get the agent zipcodes and get the distances and if the distance is 30 miles or less then append to an array
+# with detail
+for i in range(len(v_ZipSets)):
+    for j in range(len(v_ZipArray)):
+        v_ZipDistance = calculate_distance(v_ZipSets[i][3],v_ZipSets[i][4], v_ZipLatitude[j], v_ZipLongitude[j])
+        #write zip code data for those zip codes that are equal to or less than MaxDistance
+        #write zip code data for those zip codes are greater than -1 which is returned if one of the values is
+        #invalid in the function
+        if v_ZipDistance > -1 and v_ZipDistance <= v_MaxDistance :
+           #Agt zip code [0], Agt Zip City [1] , Agt Zip State [2], Agt Latitude [3], Agt Longitude [4]
+           #Destination City, Destination State, Destination Zip Code, Air Miles Distance
+            v_ZipSetsLess31.append([v_ZipSets[i][0], v_ZipSets[i][1], v_ZipSets[i][2], v_ZipSets[i][3],
+                                    v_ZipSets[i][4], v_ZipCity[j], v_ZipState[j], v_ZipArray[j],
+                                    v_ZipLatitude[j], v_ZipLongitude[j],float(v_ZipDistance)] )
+print v_ZipSetsLess31
+v_Cursor.execute(v_SQLStatementSelectTbl8_2)
+v_Connection.commit()
+#get the employee service number for each origin zip to add
+for results in v_Cursor.fetchall():
+    #employee service number [0], home zip code [1]
+    v_AgentDetailArray.append([results[0], results[1]])
+#put the employee service number and add if the agent zip code matches the origin zip code
+for i in range(len(v_ZipSetsLess31)):
+    for j in range(len(v_AgentDetailArray)):
+        if v_ZipSetsLess31[i][0] == v_AgentDetailArray[j][1]:
+            v_ZipSetsLess31[i].append(v_AgentDetailArray[j][0])
+v_OPF = open(v_OutputFile,'w')
+for i in range(len(v_ZipSetsLess31)):
+    if counter == 1:
+        header = (["employee_service_number", "origin_zip_code", "destination_zip_code", "distance"+"\n" ])
+        v_OPF.write(','.join(header))
+        record = (v_ZipSetsLess31[i][11], v_ZipSetsLess31[i][0], v_ZipSetsLess31[i][7],str(v_ZipSetsLess31[i][10])+'\n')
+        counter = counter+1
+        v_OPF.write(','.join(record))
+    else:
+        record = (v_ZipSetsLess31[i][11], v_ZipSetsLess31[i][0], v_ZipSetsLess31[i][7],str(v_ZipSetsLess31[i][10])+'\n')
+        v_OPF.write(','.join(record))
+v_OPF.close()
