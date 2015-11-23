@@ -1,0 +1,827 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 14">
+<meta name=Originator content="Microsoft Word 14">
+<link rel=File-List href="Script_for_zip_code_distance_files/filelist.xml">
+<title>Python Script Determining Zip Code Distance</title>
+<link rel=themeData href="Script_for_zip_code_distance_files/themedata.thmx">
+<link rel=colorSchemeMapping
+href="Script_for_zip_code_distance_files/colorschememapping.xml">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SplitPgBreakAndParaMark/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="267">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-520092929 1073786111 9 0 415 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:106%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+p.msochpdefault, li.msochpdefault, div.msochpdefault
+	{mso-style-name:msochpdefault;
+	mso-style-unhide:no;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+p.msopapdefault, li.msopapdefault, div.msopapdefault
+	{mso-style-name:msopapdefault;
+	mso-style-unhide:no;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:106%;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ascii-font-family:Calibri;
+	mso-hansi-font-family:Calibri;
+	mso-bidi-font-family:Calibri;}
+.MsoPapDefault
+	{mso-style-type:export-only;
+	margin-bottom:8.0pt;
+	line-height:106%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin-top:0in;
+	mso-para-margin-right:0in;
+	mso-para-margin-bottom:8.0pt;
+	mso-para-margin-left:0in;
+	line-height:106%;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Calibri","sans-serif";}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1026"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US style='tab-interval:.5in'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal>__author__ = '<span class=SpellE>Davisr</span>'</p>
+
+<p class=MsoNormal><span class=GramE>import</span> csv</p>
+
+<p class=MsoNormal><span class=GramE>import</span> math</p>
+
+<p class=MsoNormal><span class=GramE>import</span> <span class=SpellE>cx_Oracle</span></p>
+
+<p class=MsoNormal><span class=SpellE>v_Schema</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+= '<span class=SpellE>xxxxxxx</span>'</p>
+
+<p class=MsoNormal><span class=SpellE>v_Password</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+= '<span class=SpellE>xxxxxxxx</span>'</p>
+
+<p class=MsoNormal><span class=SpellE>v_ODBCConnection</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+= '@DB001'</p>
+
+<p class=MsoNormal><span class=SpellE>v_AgtZipCodeArray</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+=<span class=GramE>&nbsp; []</span></p>
+
+<p class=MsoNormal><span class=SpellE>v_AgentDetailArray</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+=<span class=GramE>&nbsp; []</span></p>
+
+<p class=MsoNormal><span class=SpellE>v_ZipArray</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+=<span class=GramE>&nbsp; []</span></p>
+
+<p class=MsoNormal><span class=SpellE>v_ZipLatitude</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+=<span class=GramE>&nbsp; []</span></p>
+
+<p class=MsoNormal><span class=SpellE>v_ZipLongitude</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+=<span class=GramE>&nbsp; []</span></p>
+
+<p class=MsoNormal><span class=SpellE>v_ZipCity</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+=<span class=GramE>&nbsp; []</span></p>
+
+<p class=MsoNormal><span class=SpellE>v_ZipState</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+=<span class=GramE>&nbsp; []</span></p>
+
+<p class=MsoNormal><span class=SpellE>v_ZipSets</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+=<span class=GramE>&nbsp; []</span></p>
+
+<p class=MsoNormal>v_ZipSetsLess31&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+=<span class=GramE>&nbsp; []</span></p>
+
+<p class=MsoNormal>#variable that determines the max distance between zip codes</p>
+
+<p class=MsoNormal><span class=SpellE>v_MaxDistance</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+=<span class=GramE>&nbsp; 30</span></p>
+
+<p class=MsoNormal><span class=GramE>counter</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+=&nbsp; 1</p>
+
+<p class=MsoNormal><span class=SpellE>v_OracleSignIn</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+= <span class=SpellE>v_Schema</span>+'/'+<span class=SpellE>v_Password+v_ODBCConnection</span></p>
+
+<p class=MsoNormal><span class=SpellE>v_Connection</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+= <span class=SpellE>cx_<span class=GramE>Oracle.connect</span></span><span
+class=GramE>(</span><span class=SpellE>v_OracleSignIn</span>)</p>
+
+<p class=MsoNormal><span class=SpellE>v_Cursor</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+= <span class=SpellE>v_<span class=GramE>Connection.cursor</span></span><span
+class=GramE>()</span></p>
+
+<p class=MsoNormal><span class=SpellE>v_InputPath</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+= &quot;C:\\Users\\davisr\\Downloads\\ZipCodes\\&quot;</p>
+
+<p class=MsoNormal><span class=SpellE>v_InputFile</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+= v_<span class=SpellE>InputPath</span>+&quot;free-zipcode-database-Primary.csv&quot;</p>
+
+<p class=MsoNormal>#<span class=GramE>file</span> from the following URL:
+http://federalgovernmentzipcodes.us/</p>
+
+<p class=MsoNormal><span class=SpellE>v_OutputPath</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+= &quot;P:\\Allshare\\Travis\\&quot;</p>
+
+<p class=MsoNormal># <span class=SpellE>v_OutputPath</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+= &quot;C:\\Users\\davisr\\Desktop\\&quot;</p>
+
+<p class=MsoNormal><span class=SpellE>v_OutputFile</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+= v_<span class=SpellE>OutputPath</span>+&quot;agent_zip_code_file.csv&quot;</p>
+
+<p class=MsoNormal>v_SQLStatementCreateTbl8 = (&quot;CREATE TABLE
+&quot;+v_Schema+&quot;.tbl_08_SalesAgents_ZipCodes <span class=GramE>AS &quot;</span></p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&quot;SELECT t041.empl_svc_<span class=GramE>num ,</span> &quot;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&quot;t041.agt_stat_<span class=GramE>cd ,</span> &quot;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&quot;t041.agt_ctrct_<span class=GramE>cd ,</span> &quot;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&quot;t041.home_<span class=GramE>city ,</span> &quot;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&quot;t041.home_<span class=GramE>st ,</span> &quot;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;t041.home_zip_<span class=GramE>cd&nbsp;
+&quot;</span></p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&quot;FROM mim.omimt041_agt <span class=GramE>t041 &quot;</span></p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&quot;WHERE t041.agt_ctrct_cd IN ('10','14'<span class=GramE>) &quot;</span></p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&quot;AND t041.agt_stat_cd = 'A' &quot;)</p>
+
+<p class=MsoNormal>v_SQLStatementDropTbl8 = (&quot;DROP TABLE<span class=GramE>&nbsp;
+&quot;</span>+v_Schema+&quot;.tbl_08_SalesAgents_ZipCodes &quot; )</p>
+
+<p class=MsoNormal>v_SQLStatementSelectTbl8_1 = (&quot;SELECT <span
+class=GramE>DISTINCT(</span>tbl_8.home_zip_cd) AS <span class=SpellE>agt_zip_cd</span>
+&quot;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&quot;FROM &quot;+v_Schema+&quot;.tbl_08_SalesAgents_ZipCodes tbl_8 &quot;)</p>
+
+<p class=MsoNormal>v_SQLStatementSelectTbl8_2 <span class=GramE>=(</span>&quot;SELECT
+tbl_8. <span class=SpellE>empl_svc_<span class=GramE>num</span></span><span
+class=GramE> ,</span> &quot;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&quot;tbl_8.home_zip_<span class=GramE>cd &quot;</span></p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&quot;FROM &quot;+v_Schema+&quot;.tbl_08_SalesAgents_ZipCodes tbl_<span
+class=GramE>8 &quot;</span> )</p>
+
+<p class=MsoNormal><span class=SpellE><span class=GramE>def</span></span> <span
+class=SpellE>calculate_distance</span>(lat1, lon1, lat2, lon2):</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; <span class=GramE>if</span> (lat1 ==
+lat2) and&nbsp; (lon1 == lon2):</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span
+class=GramE>return</span> 0</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; <span class=GramE>else</span>:</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span
+class=GramE>if</span> (not lat1) or (not lon1) or (not lat2) or (not lon2):</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span class=GramE>return</span> -1</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lat1 = <span
+class=GramE>float(</span>lat1) * <span class=SpellE>math.pi</span>/180</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lon1 = <span
+class=GramE>float(</span>lon1) * <span class=SpellE>math.pi</span>/180</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lat2 = <span
+class=GramE>float(</span>lat2) * <span class=SpellE>math.pi</span>/180</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lon2 = <span
+class=GramE>float(</span>lon2) * <span class=SpellE>math.pi</span>/180</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span
+class=GramE>return</span> 3959.0 * <span class=SpellE>math.acos</span>(<span
+class=SpellE>math.sin</span>(lat1)*<span class=SpellE>math.sin</span>(lat2) + <span
+class=SpellE>math.cos</span>(lat1)*<span class=SpellE>math.cos</span>(lat2)*<span
+class=SpellE>math.cos</span>(lon2-lon1))</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>#<span class=GramE>Above</span> function changed from the
+following URL: http://iamtgc.com/geocoding-with-python/ with the exception of
+the</p>
+
+<p class=MsoNormal>#first if statement to check for the same zip code</p>
+
+<p class=MsoNormal><span class=GramE>try</span>:</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; <span class=SpellE>v_<span class=GramE>Cursor.execute</span></span><span
+class=GramE>(</span>v_SQLStatementCreateTbl8)</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; <span class=SpellE>v_<span class=GramE>Connection.commit</span></span><span
+class=GramE>()</span></p>
+
+<p class=MsoNormal><span class=GramE>except</span>:</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; <span class=SpellE>v_<span class=GramE>Cursor.execute</span></span><span
+class=GramE>(</span>v_SQLStatementDropTbl8)</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; <span class=SpellE>v_<span class=GramE>Cursor.execute</span></span><span
+class=GramE>(</span>v_SQLStatementCreateTbl8)</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; <span class=SpellE>v_<span class=GramE>Connection.commit</span></span><span
+class=GramE>()</span></p>
+
+<p class=MsoNormal><span class=SpellE>v_<span class=GramE>Cursor.execute</span></span><span
+class=GramE>(</span>v_SQLStatementSelectTbl8_1)</p>
+
+<p class=MsoNormal><span class=SpellE>v_<span class=GramE>Connection.commit</span></span><span
+class=GramE>()</span></p>
+
+<p class=MsoNormal>#<span class=GramE>get</span> the <span class=SpellE>Agt</span>
+Data into an array</p>
+
+<p class=MsoNormal><span class=GramE>for</span> results in <span class=SpellE>v_Cursor.fetchall</span>():</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; <span class=SpellE>v_<span class=GramE>AgtZipCodeArray.append</span></span><span
+class=GramE>(</span>results[0])</p>
+
+<p class=MsoNormal><span class=GramE>print</span> <span class=SpellE>v_AgtZipCodeArray</span></p>
+
+<p class=MsoNormal><span class=SpellE>v_AllZipsFile</span> = <span
+class=SpellE><span class=GramE>csv.DictReader</span></span><span class=GramE>(</span>open(<span
+class=SpellE>v_InputFile</span>))</p>
+
+<p class=MsoNormal>#read Zip code file into an array</p>
+
+<p class=MsoNormal><span class=GramE>for</span> row in <span class=SpellE>v_AllZipsFile</span>:</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; <span class=SpellE>v_<span class=GramE>ZipArray.append</span></span><span
+class=GramE>(</span>row[&quot;<span class=SpellE>Zipcode</span>&quot;])</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; <span class=SpellE>v_<span class=GramE>ZipLatitude.append</span></span><span
+class=GramE>(</span>row[&quot;<span class=SpellE>Lat</span>&quot;])</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; <span class=SpellE>v_<span class=GramE>ZipLongitude.append</span></span><span
+class=GramE>(</span>row[&quot;Long&quot;])</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; <span class=SpellE>v_<span class=GramE>ZipCity.append</span></span><span
+class=GramE>(</span>row[&quot;City&quot;])</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; <span class=SpellE>v_<span class=GramE>ZipState.append</span></span><span
+class=GramE>(</span>row[&quot;State&quot;])</p>
+
+<p class=MsoNormal>#<span class=GramE>get</span> the longitude and latitude of
+a zip code by looping through zip code file</p>
+
+<p class=MsoNormal><span class=GramE>for</span> i in range(<span class=SpellE>len</span>(<span
+class=SpellE>v_AgtZipCodeArray</span>)):</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; <span class=GramE>for</span> j in range(<span
+class=SpellE>len</span>(<span class=SpellE>v_ZipArray</span>)):</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span
+class=GramE>if</span> <span class=SpellE>v_AgtZipCodeArray</span>[i] == <span
+class=SpellE>v_ZipArray</span>[j]:</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+#Agent zip code [0], Agent Zip City [1], Agent Zip State [2], Agent Latitude [3<span
+class=GramE>] ,</span> Agent Longitude [4]</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span class=SpellE>v_<span class=GramE>ZipSets.append</span></span><span
+class=GramE>(</span>[<span class=SpellE>v_AgtZipCodeArray</span>[i] , <span
+class=SpellE>v_ZipCity</span>[j], <span class=SpellE>v_ZipState</span>[j], <span
+class=SpellE>v_ZipLatitude</span>[j], <span class=SpellE>v_ZipLongitude</span>[j]
+])</p>
+
+<p class=MsoNormal>#<span class=GramE>get</span> a list of zip codes from MIMs
+that are not in the zip code file.</p>
+
+<p class=MsoNormal><span class=GramE>for</span> i in range(<span class=SpellE>len</span>(<span
+class=SpellE>v_AgtZipCodeArray</span>)):</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; <span class=SpellE>InArray</span> = <span
+class=SpellE>v_AgtZipCodeArray</span>[i] not in <span class=SpellE>v_ZipArray</span></p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; <span class=GramE>if</span> <span
+class=SpellE>InArray</span> == True :</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span
+class=GramE>print</span> <span class=SpellE>v_AgtZipCodeArray</span>[i]</p>
+
+<p class=MsoNormal>#<span class=GramE>get</span> the agent <span class=SpellE>zipcodes</span>
+and get the distances and if the distance is 30 miles or less then append to an
+array</p>
+
+<p class=MsoNormal># <span class=GramE>with</span> detail</p>
+
+<p class=MsoNormal><span class=GramE>for</span> i in range(<span class=SpellE>len</span>(<span
+class=SpellE>v_ZipSets</span>)):</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; <span class=GramE>for</span> j in range(<span
+class=SpellE>len</span>(<span class=SpellE>v_ZipArray</span>)):</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span
+class=SpellE>v_ZipDistance</span> = <span class=SpellE>calculate_<span
+class=GramE>distance</span></span><span class=GramE>(</span><span class=SpellE>v_ZipSets</span>[i][3],<span
+class=SpellE>v_ZipSets</span>[i][4], <span class=SpellE>v_ZipLatitude</span>[j],
+<span class=SpellE>v_ZipLongitude</span>[j])</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #<span
+class=GramE>write</span> zip code data for those zip codes that are equal to or
+less than <span class=SpellE>MaxDistance</span></p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #write zip code
+data for those zip codes are greater than -1 which is returned if one of the
+values is</p>
+
+<p class=MsoNormal>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#invalid in the
+function</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span
+class=GramE>if</span> <span class=SpellE>v_ZipDistance</span> &gt; -1 and <span
+class=SpellE>v_ZipDistance</span> &lt;= <span class=SpellE>v_MaxDistance</span>
+:</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+#<span class=SpellE>Agt</span> zip code [0], <span class=SpellE>Agt</span> Zip
+City [1<span class=GramE>] ,</span> <span class=SpellE>Agt</span> Zip State
+[2], <span class=SpellE>Agt</span> Latitude [3], <span class=SpellE>Agt</span>
+Longitude [4]</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+#Destination City, Destination State, Destination Zip Code, Air Miles Distance</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+v_ZipSetsLess31.append([<span class=SpellE>v_ZipSets</span>[i][0], <span
+class=SpellE>v_ZipSets</span>[i][1], <span class=SpellE>v_ZipSets</span>[i][2],
+<span class=SpellE>v_ZipSets</span>[i][3],</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span class=SpellE>v_ZipSets</span>[i<span class=GramE>][</span>4], <span
+class=SpellE>v_ZipCity</span>[j], <span class=SpellE>v_ZipState</span>[j], <span
+class=SpellE>v_ZipArray</span>[j],</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+class=SpellE>v_ZipLatitude</span>[j], <span class=SpellE>v_ZipLongitude</span>[j]<span
+class=GramE>,float</span>(<span class=SpellE>v_ZipDistance</span>)] )</p>
+
+<p class=MsoNormal><span class=GramE>print</span> v_ZipSetsLess31</p>
+
+<p class=MsoNormal><span class=SpellE>v_<span class=GramE>Cursor.execute</span></span><span
+class=GramE>(</span>v_SQLStatementSelectTbl8_2)</p>
+
+<p class=MsoNormal><span class=SpellE>v_<span class=GramE>Connection.commit</span></span><span
+class=GramE>()</span></p>
+
+<p class=MsoNormal>#get the employee service number for each origin zip to add</p>
+
+<p class=MsoNormal><span class=GramE>for</span> results in <span class=SpellE>v_Cursor.fetchall</span>():</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; #employee service number [0], home zip
+code [1]</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; <span class=SpellE>v_<span class=GramE>AgentDetailArray.append</span></span><span
+class=GramE>(</span>[results[0], results[1]])</p>
+
+<p class=MsoNormal>#put the employee service number and <span class=GramE>add</span>
+if the agent zip code matches the origin zip code</p>
+
+<p class=MsoNormal><span class=GramE>for</span> i in range(<span class=SpellE>len</span>(v_ZipSetsLess31)):</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; <span class=GramE>for</span> j in range(<span
+class=SpellE>len</span>(<span class=SpellE>v_AgentDetailArray</span>)):</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span
+class=GramE>if</span> v_ZipSetsLess31[i][0] == <span class=SpellE>v_AgentDetailArray</span>[j][1]:</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+v_<span class=GramE>ZipSetsLess31[</span>i].append(<span class=SpellE>v_AgentDetailArray</span>[j][0])</p>
+
+<p class=MsoNormal><span class=SpellE>v_OPF</span> = <span class=GramE>open(</span>v_<span
+class=SpellE>OutputFile</span>,'w')</p>
+
+<p class=MsoNormal><span class=GramE>for</span> i in range(<span class=SpellE>len</span>(v_ZipSetsLess31)):</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; <span class=GramE>if</span> counter == 1:</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span
+class=GramE>header</span> = ([&quot;<span class=SpellE>employee_service_number</span>&quot;,
+&quot;<span class=SpellE>origin_zip_code</span>&quot;, &quot;<span
+class=SpellE>destination_zip_code</span>&quot;, &quot;distance&quot;+&quot;\n&quot;
+])</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span
+class=SpellE>v_<span class=GramE>OPF.write</span></span><span class=GramE>(</span>','.join(header))</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; record =
+(v_ZipSetsLess31[i][11], v_ZipSetsLess31[i][0], v_ZipSetsLess31[i][7],<span
+class=SpellE>str</span>(v_ZipSetsLess31[i][10])+'\n')</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span
+class=GramE>counter</span> = counter+1</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span
+class=SpellE>v_<span class=GramE>OPF.write</span></span><span class=GramE>(</span>','.join(record))</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp; <span class=GramE>else</span>:</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; record =
+(v_ZipSetsLess31[i][11], v_ZipSetsLess31[i][0], v_ZipSetsLess31[i][7],<span
+class=SpellE>str</span>(v_ZipSetsLess31[i][10])+'\n')</p>
+
+<p class=MsoNormal>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span
+class=SpellE>v_<span class=GramE>OPF.write</span></span><span class=GramE>(</span>','.join(record))</p>
+
+<p class=MsoNormal><span class=SpellE>v_<span class=GramE>OPF.close</span></span><span
+class=GramE>()</span></p>
+
+</div>
+
+</body>
+
+</html>
