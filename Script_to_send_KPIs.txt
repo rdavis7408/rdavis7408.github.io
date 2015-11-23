@@ -10,9 +10,9 @@ import time
 
 ################################################################################################
 #Path to Read from where you want all the files read from
-#InputWkbkPath = "O:/MIS/Reporting/Field Bonus Plan Reports/2015_Comp_Template_Files/Agency Directors Comp Templates/AD_Files_by_Rpt_LO/AL89_Danny_Noles_North_Alabama/"
 
-#InputWkbkPath = "O:/MIS/Reporting/Field Bonus Plan Reports/2015_Comp_Template_Files/Alternate Plan Comp Templates/Alternate_Plan_Agency_Director_Comp_Templates/"
+
+InputWkbkPath = "O:/MIS/Reporting/Field Bonus Plan Reports/2015_Comp_Template_Files/Alternate Plan Comp Templates/Alternate_Plan_Agency_Director_Comp_Templates/"
 #InputWkbkPath = "O:/MIS/Reporting/Field Bonus Plan Reports/TEST SEND/"
 obj = win32com.client.Dispatch("Outlook.Application")
 xlApp = win32com.client.DispatchEx('Excel.Application')
