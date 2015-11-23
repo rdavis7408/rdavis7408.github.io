@@ -52,10 +52,10 @@ var work = {
 var projects = {
 	"projects": [
 	{
-		"title": "The Linux Startup",
-		"dates": "2012-2014",
-		"description": "Created a website to help newcomers to linux. The Site was built using Wordpress.",
-		"images": ['images/thelinuxstartupsmall.jpg']
+		"title": "Daily HTML Repor",
+		"dates": "2014",
+		"description": "Using the R Language and the googleVis and RHTML libraries created a process using BAT file, ODBC to MySQL Database to update customer with daily reporting",
+		"images": ["<a href= "]
 	},
 	{
 		"title": "Genesis Kickstart",
