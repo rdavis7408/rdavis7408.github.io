@@ -55,14 +55,14 @@ var projects = {
 		"title": "Daily HTML Report",
 		"dates": "2014",
 		"description": "Using the R Language and the googleVis and RHTML libraries created a process using BAT file, ODBC to MySQL Database to update customer with daily reporting.",
-		"images": ['images/Answer_Record_Count_Pic.png'],
+		"images": ['images/Answer_Record_Count_Pic.jpg'],
 		"url": "R_Dash_example.html"
 	},
 	{
 		"title": "Python Script to Calculate Lead Distance",
 		"dates": "2015",
 		"description": "A Python Script that calculates the distance from sales representative to sales lead zip codes and keeps those pairs that are within 30 miles. ",
-		"images": ['images/Python_Zip_Code_Pic.png'],
+		"images": ['images/Python_Zip_Code_Pic.jpg'],
 		"url": "Script_for_zip_code_distance.txt"
 	},
 	{
