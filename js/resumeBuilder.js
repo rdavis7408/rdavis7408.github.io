@@ -66,11 +66,11 @@ var projects = {
 		"url": "Script_for_zip_code_distance.txt"
 	},
 	{
-		"title": "Udacity Portfolio",
+		"title": "Create Mass KPI Emails with Python",
 		"completed": "2015",
-		"description": "Portfolio to show off my amazing work while working on the Udacity Front-end Nanodegree.",
+		"description": "Using Python and the win32com 200 KPI spreadsheets are open values read to whom to send the emails, email subjects and content are read in and a pdf created for each receipient and their supervisor.",
 		"images": ['images/udacity-portfolio-site_small.jpg'],
-		"url": "R_Dash_example.html"
+		"url": "Script_to_send_KPIs.txt"
 	}
 	]
 };
