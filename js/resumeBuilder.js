@@ -63,12 +63,14 @@ var projects = {
 		"dates": "2015",
 		"description": "Web application used to build Wordpress themes for the Genesis Framework.",
 		"images": ['images/genesiskickstart_tksmall.jpg']
+		"url": "<a href= R_Dash_example.html>Report Example</a>"
 	},
 	{
 		"title": "Udacity Portfolio",
 		"completed": "2015",
 		"description": "Portfolio to show off my amazing work while working on the Udacity Front-end Nanodegree.",
 		"images": ['images/udacity-portfolio-site_small.jpg']
+		"url": "<a href= R_Dash_example.html>Report Example</a>"
 	}
 	]
 };
@@ -171,7 +173,7 @@ projects.display = function() {
 	for (project in projects.projects) {
 		$("#projects").append(HTMLprojectStart);
 
-		var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
+		var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title).replace('#', projects.projects[project].url);
 		$(".project-entry:last").append(formattedTitle);
 
 		var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
