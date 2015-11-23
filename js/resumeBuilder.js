@@ -62,7 +62,7 @@ var projects = {
 		"title": "Python Script to Calculate Lead Distance",
 		"dates": "2015",
 		"description": "A Python Script that calculates the distance from sales representative to sales lead zip codes and keeps those pairs that are within 30 miles. ",
-		"images": ['images/genesiskickstart_tksmall.jpg'],
+		"images": ['images/Python_Zip_Code_Pic.png'],
 		"url": "Script_for_zip_code_distance.txt"
 	},
 	{
