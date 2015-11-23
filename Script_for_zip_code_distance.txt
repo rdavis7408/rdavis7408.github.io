@@ -1,15 +1,10 @@
-
-
-<html>
-<body>
-<p>
 __author__ = 'Davisr'
 import csv
 import math
 import cx_Oracle
-v_Schema                = 'xxxxxx'
-v_Password              = 'xxxxxxxx'
-v_ODBCConnection        = '@DB001'
+v_Schema                = 'davisr'
+v_Password              = 'June4May$'
+v_ODBCConnection        = '@omimd001'
 v_AgtZipCodeArray       =  []
 v_AgentDetailArray      =  []
 v_ZipArray              =  []
@@ -53,14 +48,14 @@ def calculate_distance(lat1, lon1, lat2, lon2):
     else:
         if (not lat1) or (not lon1) or (not lat2) or (not lon2):
                 return -1
- 
+
         lat1 = float(lat1) * math.pi/180
         lon1 = float(lon1) * math.pi/180
         lat2 = float(lat2) * math.pi/180
         lon2 = float(lon2) * math.pi/180
- 
+
         return 3959.0 * math.acos(math.sin(lat1)*math.sin(lat2) + math.cos(lat1)*math.cos(lat2)*math.cos(lon2-lon1))
- 
+
 #Above function changed from the following URL: http://iamtgc.com/geocoding-with-python/ with the exception of the
 #first if statement to check for the same zip code
 try:
@@ -132,6 +127,3 @@ for i in range(len(v_ZipSetsLess31)):
         record = (v_ZipSetsLess31[i][11], v_ZipSetsLess31[i][0], v_ZipSetsLess31[i][7],str(v_ZipSetsLess31[i][10])+'\n')
         v_OPF.write(','.join(record))
 v_OPF.close()
-</p>
-</body>
-</html>
