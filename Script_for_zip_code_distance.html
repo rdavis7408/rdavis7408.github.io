@@ -1,437 +1,137 @@
+
+
 <html>
-
-<head>
-<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
-<meta name=Generator content="Microsoft Word 14 (filtered)">
-<style>
-<!--
- /* Font Definitions */
- @font-face
-	{font-family:Calibri;
-	panose-1:2 15 5 2 2 2 4 3 2 4;}
-@font-face
-	{font-family:Consolas;
-	panose-1:2 11 6 9 2 2 4 3 2 4;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin-top:0in;
-	margin-right:0in;
-	margin-bottom:8.0pt;
-	margin-left:0in;
-	line-height:107%;
-	font-size:11.0pt;
-	font-family:"Calibri","sans-serif";}
-p.MsoPlainText, li.MsoPlainText, div.MsoPlainText
-	{mso-style-link:"Plain Text Char";
-	margin:0in;
-	margin-bottom:.0001pt;
-	font-size:10.5pt;
-	font-family:Consolas;}
-span.PlainTextChar
-	{mso-style-name:"Plain Text Char";
-	mso-style-link:"Plain Text";
-	font-family:Consolas;}
-.MsoChpDefault
-	{font-family:"Calibri","sans-serif";}
-.MsoPapDefault
-	{margin-bottom:8.0pt;
-	line-height:107%;}
-@page WordSection1
-	{size:8.5in 11.0in;
-	margin:1.0in 75.1pt 1.0in 75.05pt;}
-div.WordSection1
-	{page:WordSection1;}
--->
-</style>
-
-</head>
-
-<body lang=EN-US>
-
-<div class=WordSection1>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>__author__ =
-'Davisr'</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>import csv</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>import math</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>import cx_Oracle</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>v_Schema               
-= 'xxxxxx'</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>v_Password           
-  = 'xxxxxxxx'</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>v_ODBCConnection       
-= '@DB001'</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>v_AgtZipCodeArray      
-=  []</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>v_AgentDetailArray     
-=  []</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>v_ZipArray              = 
-[]</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>v_ZipLatitude          
-=  []</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>v_ZipLongitude         
-=  []</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>v_ZipCity              
-=  []</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>v_ZipState             
-=  []</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>v_ZipSets              
-=  []</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>v_ZipSetsLess31        
-=  []</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>#variable that
-determines the max distance between zip codes</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>v_MaxDistance          
-=  30</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>counter                
-=  1</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>v_OracleSignIn         
-= v_Schema+'/'+v_Password+v_ODBCConnection</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>v_Connection              
-= cx_Oracle.connect(v_OracleSignIn)</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>v_Cursor                  
-= v_Connection.cursor()</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>v_InputPath               
-= &quot;C:\\Users\\davisr\\Downloads\\ZipCodes\\&quot;</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>v_InputFile               
-= v_InputPath+&quot;free-zipcode-database-Primary.csv&quot;</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>#file from the
-following URL: http://federalgovernmentzipcodes.us/</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>v_OutputPath              
-= &quot;P:\\Allshare\\Travis\\&quot;</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>#
-v_OutputPath               = &quot;C:\\Users\\davisr\\Desktop\\&quot;</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>v_OutputFile              
-= v_OutputPath+&quot;agent_zip_code_file.csv&quot;</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>v_SQLStatementCreateTbl8
-= (&quot;CREATE TABLE &quot;+v_Schema+&quot;.tbl_08_SalesAgents_ZipCodes AS
-&quot;</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>                  
-                        &quot;SELECT t041.empl_svc_num , &quot;</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>                                                 
-&quot;t041.agt_stat_cd , &quot;</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>                                                 
-&quot;t041.agt_ctrct_cd , &quot;</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>                                                 
-&quot;t041.home_city , &quot;</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>                                                 
-&quot;t041.home_st , &quot;</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>                                                 
-&quot;t041.home_zip_cd  &quot;</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>                                          
-&quot;FROM mim.omimt041_agt t041 &quot;</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>                       
-                   &quot;WHERE t041.agt_ctrct_cd IN ('10','14') &quot;</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>                                          
-&quot;AND t041.agt_stat_cd = 'A' &quot;)</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>v_SQLStatementDropTbl8
-= (&quot;DROP TABLE  &quot;+v_Schema+&quot;.tbl_08_SalesAgents_ZipCodes &quot;
-)</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>v_SQLStatementSelectTbl8_1
-= (&quot;SELECT DISTINCT(tbl_8.home_zip_cd) AS agt_zip_cd &quot;</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>                           
-&quot;FROM &quot;+v_Schema+&quot;.tbl_08_SalesAgents_ZipCodes tbl_8 &quot;)</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>v_SQLStatementSelectTbl8_2
-=(&quot;SELECT tbl_8. empl_svc_num , &quot;</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>                                   
-&quot;tbl_8.home_zip_cd &quot;</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>                             &quot;FROM
-&quot;+v_Schema+&quot;.tbl_08_SalesAgents_ZipCodes tbl_8 &quot; )</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>def
-calculate_distance(lat1, lon1, lat2, lon2):</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>    if (lat1 ==
-lat2) and  (lon1 == lon2):</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>        return 0</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>    else:</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>        if (not
-lat1) or (not lon1) or (not lat2) or (not lon2):</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>               
-return -1</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>&nbsp;</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>        lat1 =
-float(lat1) * math.pi/180</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>        lon1 =
-float(lon1) * math.pi/180</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>        lat2 =
-float(lat2) * math.pi/180</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>        lon2 =
-float(lon2) * math.pi/180</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>&nbsp;</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>        return
-3959.0 * math.acos(math.sin(lat1)*math.sin(lat2) +
-math.cos(lat1)*math.cos(lat2)*math.cos(lon2-lon1))</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>&nbsp;</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>#Above function
-changed from the following URL: http://iamtgc.com/geocoding-with-python/ with
-the exception of the</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>#first if
-statement to check for the same zip code</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>try:</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>    v_Cursor.execute(v_SQLStatementCreateTbl8)</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>   
-v_Connection.commit()</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>except:</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>   
-v_Cursor.execute(v_SQLStatementDropTbl8)</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>   
-v_Cursor.execute(v_SQLStatementCreateTbl8)</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>   
-v_Connection.commit()</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>v_Cursor.execute(v_SQLStatementSelectTbl8_1)</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>v_Connection.commit()</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>#get the Agt Data
-into an array</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>for results in
-v_Cursor.fetchall():</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>   
-v_AgtZipCodeArray.append(results[0])</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>v_AllZipsFile =
-csv.DictReader(open(v_InputFile))</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>#read Zip code
-file into an array</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>for row in
-v_AllZipsFile:</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>    v_ZipArray.append(row[&quot;Zipcode&quot;])</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>   
-v_ZipLatitude.append(row[&quot;Lat&quot;])</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>   
-v_ZipLongitude.append(row[&quot;Long&quot;])</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>   
-v_ZipCity.append(row[&quot;City&quot;])</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>   
-v_ZipState.append(row[&quot;State&quot;])</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>#get the
-longitude and latitude of a zip code by looping through zip code file</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>for i in
-range(len(v_AgtZipCodeArray)):</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>    for j in
-range(len(v_ZipArray)):</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>        if
-v_AgtZipCodeArray[i] == v_ZipArray[j]:</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>           
-#Agent zip code [0], Agent Zip City [1], Agent Zip State [2], Agent Latitude
-[3] , Agent Longitude [4]</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>            v_ZipSets.append([v_AgtZipCodeArray[i]
-, v_ZipCity[j], v_ZipState[j], v_ZipLatitude[j], v_ZipLongitude[j] ])</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>#get a list of
-zip codes from MIMs that are not in the zip code file.</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>for i in
-range(len(v_AgtZipCodeArray)):</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>    InArray =
-v_AgtZipCodeArray[i] not in v_ZipArray</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>    if InArray ==
-True :</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>        print
-v_AgtZipCodeArray[i]</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>#get the agent
-zipcodes and get the distances and if the distance is 30 miles or less then
-append to an array</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'># with detail</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>for i in
-range(len(v_ZipSets)):</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>    for j in range(len(v_ZipArray)):</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>       
-v_ZipDistance = calculate_distance(v_ZipSets[i][3],v_ZipSets[i][4],
-v_ZipLatitude[j], v_ZipLongitude[j])</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>        #write
-zip code data for those zip codes that are equal to or less than MaxDistance</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>        #write
-zip code data for those zip codes are greater than -1 which is returned if one
-of the values is</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>        #invalid
-in the function</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>        if
-v_ZipDistance &gt; -1 and v_ZipDistance &lt;= v_MaxDistance :</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>           #Agt
-zip code [0], Agt Zip City [1] , Agt Zip State [2], Agt Latitude [3], Agt
-Longitude [4]</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>          
-#Destination City, Destination State, Destination Zip Code, Air Miles Distance</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>           
-v_ZipSetsLess31.append([v_ZipSets[i][0], v_ZipSets[i][1], v_ZipSets[i][2],
-v_ZipSets[i][3],</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>                      
-             v_ZipSets[i][4], v_ZipCity[j], v_ZipState[j], v_ZipArray[j],</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>                                   
-v_ZipLatitude[j], v_ZipLongitude[j],float(v_ZipDistance)] )</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>print
-v_ZipSetsLess31</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>v_Cursor.execute(v_SQLStatementSelectTbl8_2)</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>v_Connection.commit()</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>#get the employee
-service number for each origin zip to add</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>for results in
-v_Cursor.fetchall():</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>    #employee
-service number [0], home zip code [1]</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>   
-v_AgentDetailArray.append([results[0], results[1]])</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>#put the employee
-service number and add if the agent zip code matches the origin zip code</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>for i in
-range(len(v_ZipSetsLess31)):</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>    for j in
-range(len(v_AgentDetailArray)):</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>        if
-v_ZipSetsLess31[i][0] == v_AgentDetailArray[j][1]:</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>           
-v_ZipSetsLess31[i].append(v_AgentDetailArray[j][0])</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>v_OPF =
-open(v_OutputFile,'w')</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>for i in
-range(len(v_ZipSetsLess31)):</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>    if counter ==
-1:</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>        header =
-([&quot;employee_service_number&quot;, &quot;origin_zip_code&quot;,
-&quot;destination_zip_code&quot;, &quot;distance&quot;+&quot;\n&quot; ])</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>       
-v_OPF.write(','.join(header))</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>        record =
-(v_ZipSetsLess31[i][11], v_ZipSetsLess31[i][0],
-v_ZipSetsLess31[i][7],str(v_ZipSetsLess31[i][10])+'\n')</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>        counter =
-counter+1</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>       
-v_OPF.write(','.join(record))</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>    else:</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>        record =
-(v_ZipSetsLess31[i][11], v_ZipSetsLess31[i][0],
-v_ZipSetsLess31[i][7],str(v_ZipSetsLess31[i][10])+'\n')</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>       
-v_OPF.write(','.join(record))</span></p>
-
-<p class=MsoPlainText><span style='font-family:"Courier New"'>v_OPF.close()</span></p>
-
-</div>
-
+<body>
+<p>
+__author__ = 'Davisr'
+import csv
+import math
+import cx_Oracle
+v_Schema                = 'xxxxxx'
+v_Password              = 'xxxxxxxx'
+v_ODBCConnection        = '@DB001'
+v_AgtZipCodeArray       =  []
+v_AgentDetailArray      =  []
+v_ZipArray              =  []
+v_ZipLatitude           =  []
+v_ZipLongitude          =  []
+v_ZipCity               =  []
+v_ZipState              =  []
+v_ZipSets               =  []
+v_ZipSetsLess31         =  []
+#variable that determines the max distance between zip codes
+v_MaxDistance           =  30
+counter                 =  1
+v_OracleSignIn          = v_Schema+'/'+v_Password+v_ODBCConnection
+v_Connection               = cx_Oracle.connect(v_OracleSignIn)
+v_Cursor                   = v_Connection.cursor()
+v_InputPath                = "C:\\Users\\davisr\\Downloads\\ZipCodes\\"
+v_InputFile                = v_InputPath+"free-zipcode-database-Primary.csv"
+#file from the following URL: http://federalgovernmentzipcodes.us/
+v_OutputPath               = "P:\\Allshare\\Travis\\"
+# v_OutputPath               = "C:\\Users\\davisr\\Desktop\\"
+v_OutputFile               = v_OutputPath+"agent_zip_code_file.csv"
+v_SQLStatementCreateTbl8 = ("CREATE TABLE "+v_Schema+".tbl_08_SalesAgents_ZipCodes AS "
+                                           "SELECT t041.empl_svc_num , "
+                                                  "t041.agt_stat_cd , "
+                                                  "t041.agt_ctrct_cd , "
+                                                  "t041.home_city , "
+                                                  "t041.home_st , "
+                                                  "t041.home_zip_cd  "
+                                           "FROM mim.omimt041_agt t041 "
+                                           "WHERE t041.agt_ctrct_cd IN ('10','14') "
+                                           "AND t041.agt_stat_cd = 'A' ")
+v_SQLStatementDropTbl8 = ("DROP TABLE  "+v_Schema+".tbl_08_SalesAgents_ZipCodes " )
+v_SQLStatementSelectTbl8_1 = ("SELECT DISTINCT(tbl_8.home_zip_cd) AS agt_zip_cd "
+                            "FROM "+v_Schema+".tbl_08_SalesAgents_ZipCodes tbl_8 ")
+v_SQLStatementSelectTbl8_2 =("SELECT tbl_8. empl_svc_num , "
+                                    "tbl_8.home_zip_cd "
+                             "FROM "+v_Schema+".tbl_08_SalesAgents_ZipCodes tbl_8 " )
+def calculate_distance(lat1, lon1, lat2, lon2):
+    if (lat1 == lat2) and  (lon1 == lon2):
+        return 0
+    else:
+        if (not lat1) or (not lon1) or (not lat2) or (not lon2):
+                return -1
+ 
+        lat1 = float(lat1) * math.pi/180
+        lon1 = float(lon1) * math.pi/180
+        lat2 = float(lat2) * math.pi/180
+        lon2 = float(lon2) * math.pi/180
+ 
+        return 3959.0 * math.acos(math.sin(lat1)*math.sin(lat2) + math.cos(lat1)*math.cos(lat2)*math.cos(lon2-lon1))
+ 
+#Above function changed from the following URL: http://iamtgc.com/geocoding-with-python/ with the exception of the
+#first if statement to check for the same zip code
+try:
+    v_Cursor.execute(v_SQLStatementCreateTbl8)
+    v_Connection.commit()
+except:
+    v_Cursor.execute(v_SQLStatementDropTbl8)
+    v_Cursor.execute(v_SQLStatementCreateTbl8)
+    v_Connection.commit()
+v_Cursor.execute(v_SQLStatementSelectTbl8_1)
+v_Connection.commit()
+#get the Agt Data into an array
+for results in v_Cursor.fetchall():
+    v_AgtZipCodeArray.append(results[0])
+v_AllZipsFile = csv.DictReader(open(v_InputFile))
+#read Zip code file into an array
+for row in v_AllZipsFile:
+    v_ZipArray.append(row["Zipcode"])
+    v_ZipLatitude.append(row["Lat"])
+    v_ZipLongitude.append(row["Long"])
+    v_ZipCity.append(row["City"])
+    v_ZipState.append(row["State"])
+#get the longitude and latitude of a zip code by looping through zip code file
+for i in range(len(v_AgtZipCodeArray)):
+    for j in range(len(v_ZipArray)):
+        if v_AgtZipCodeArray[i] == v_ZipArray[j]:
+            #Agent zip code [0], Agent Zip City [1], Agent Zip State [2], Agent Latitude [3] , Agent Longitude [4]
+            v_ZipSets.append([v_AgtZipCodeArray[i] , v_ZipCity[j], v_ZipState[j], v_ZipLatitude[j], v_ZipLongitude[j] ])
+#get a list of zip codes from MIMs that are not in the zip code file.
+for i in range(len(v_AgtZipCodeArray)):
+    InArray = v_AgtZipCodeArray[i] not in v_ZipArray
+    if InArray == True :
+        print v_AgtZipCodeArray[i]
+#get the agent zipcodes and get the distances and if the distance is 30 miles or less then append to an array
+# with detail
+for i in range(len(v_ZipSets)):
+    for j in range(len(v_ZipArray)):
+        v_ZipDistance = calculate_distance(v_ZipSets[i][3],v_ZipSets[i][4], v_ZipLatitude[j], v_ZipLongitude[j])
+        #write zip code data for those zip codes that are equal to or less than MaxDistance
+        #write zip code data for those zip codes are greater than -1 which is returned if one of the values is
+        #invalid in the function
+        if v_ZipDistance > -1 and v_ZipDistance <= v_MaxDistance :
+           #Agt zip code [0], Agt Zip City [1] , Agt Zip State [2], Agt Latitude [3], Agt Longitude [4]
+           #Destination City, Destination State, Destination Zip Code, Air Miles Distance
+            v_ZipSetsLess31.append([v_ZipSets[i][0], v_ZipSets[i][1], v_ZipSets[i][2], v_ZipSets[i][3],
+                                    v_ZipSets[i][4], v_ZipCity[j], v_ZipState[j], v_ZipArray[j],
+                                    v_ZipLatitude[j], v_ZipLongitude[j],float(v_ZipDistance)] )
+print v_ZipSetsLess31
+v_Cursor.execute(v_SQLStatementSelectTbl8_2)
+v_Connection.commit()
+#get the employee service number for each origin zip to add
+for results in v_Cursor.fetchall():
+    #employee service number [0], home zip code [1]
+    v_AgentDetailArray.append([results[0], results[1]])
+#put the employee service number and add if the agent zip code matches the origin zip code
+for i in range(len(v_ZipSetsLess31)):
+    for j in range(len(v_AgentDetailArray)):
+        if v_ZipSetsLess31[i][0] == v_AgentDetailArray[j][1]:
+            v_ZipSetsLess31[i].append(v_AgentDetailArray[j][0])
+v_OPF = open(v_OutputFile,'w')
+for i in range(len(v_ZipSetsLess31)):
+    if counter == 1:
+        header = (["employee_service_number", "origin_zip_code", "destination_zip_code", "distance"+"\n" ])
+        v_OPF.write(','.join(header))
+        record = (v_ZipSetsLess31[i][11], v_ZipSetsLess31[i][0], v_ZipSetsLess31[i][7],str(v_ZipSetsLess31[i][10])+'\n')
+        counter = counter+1
+        v_OPF.write(','.join(record))
+    else:
+        record = (v_ZipSetsLess31[i][11], v_ZipSetsLess31[i][0], v_ZipSetsLess31[i][7],str(v_ZipSetsLess31[i][10])+'\n')
+        v_OPF.write(','.join(record))
+v_OPF.close()
+</p>
 </body>
-
 </html>
