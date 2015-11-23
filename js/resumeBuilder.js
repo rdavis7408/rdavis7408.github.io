@@ -74,10 +74,10 @@ var projects = {
 	},
 	{
 		"title": "Tableau Map",
-		"dates": "2014",
-		"description": "Using Python and the win32com 200 KPI spreadsheets are open values read to whom to send the emails, email subjects and content are read in and a pdf created for each receipient and their supervisor.",
+		"dates": "2013",
+		"description": "Tableau Map showing Colonial relationships between countries through time.",
 		"images": ['images/Python_script_send_comp.jpg'],
-		"url": "Script_to_send_KPIs.txt"
+		"url": "https://public.tableau.com/profile/robert.davis#!/vizhome/COW_Map_2013120601/Dashboard1"
 	}
 	]
 };
