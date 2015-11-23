@@ -1,0 +1,119 @@
+_author__ = 'Davisr'
+
+import os
+import win32com.client
+
+import datetime
+import time
+
+
+
+################################################################################################
+#Path to Read from where you want all the files read from
+#InputWkbkPath = "O:/MIS/Reporting/Field Bonus Plan Reports/2015_Comp_Template_Files/Agency Directors Comp Templates/AD_Files_by_Rpt_LO/AL89_Danny_Noles_North_Alabama/"
+
+#InputWkbkPath = "O:/MIS/Reporting/Field Bonus Plan Reports/2015_Comp_Template_Files/Alternate Plan Comp Templates/Alternate_Plan_Agency_Director_Comp_Templates/"
+#InputWkbkPath = "O:/MIS/Reporting/Field Bonus Plan Reports/TEST SEND/"
+obj = win32com.client.Dispatch("Outlook.Application")
+xlApp = win32com.client.DispatchEx('Excel.Application')
+xlApp.DisplayAlerts = False
+xlApp.ScreenUpdating = False
+
+OutputWkbkPath ='O:\\MIS\\Reporting\\Field Bonus Plan Reports\\2015_Comp_Template_Files\\Agency Directors Comp Templates\\20151029_Archive\\'
+#OutputWkbkPath ="O:\\MIS\Reporting\Field Bonus Plan Reports\\2015_Comp_Template_Files\\Agency Directors Comp Templates\\20150123_Archive_TEST\\"
+On_Off = open("O:\\MIS\\Reporting\\Field Bonus Plan Reports\\Send_or_No_Send.txt",'r')
+On_Off = On_Off.read()
+
+if On_Off == "YES":
+
+    for subdir, dirs, files in os.walk(InputWkbkPath):
+        for file in files:
+            #print os.path.join(subdir, file)
+            ip= os.path.join(subdir, file)
+
+
+            xlwb= xlApp.Workbooks.Open(ip)
+
+            #print xlwb
+            currentyear = datetime.date.today().strftime("%Y")
+            currentmonth = datetime.date.today().strftime("%B")
+            currentday = datetime.date.today().strftime("%d")
+            currenthour = time.strftime("%X")
+            currentdate = currentmonth+"-"+currentday+"-"+currentyear
+            participant = xlwb.Worksheets(1).Range("C4").Value
+            participant = participant.replace(', ','_')
+            title = xlwb.Worksheets(1).Range("C5").Value
+            StaffCode = xlwb.Worksheets(1).Range("C6").Value
+            OfficeName = xlwb.Worksheets(1).Range("C7").Value
+            LOCode = str(xlwb.Worksheets(1).Range("C8").Value)
+            Region = xlwb.Worksheets(1).Range("C9").Value
+            Region = Region.replace(' ','')
+            Region = str(Region)
+            ESN = str(xlwb.Worksheets(1).Range("C10").Value)
+            ESN = ESN.replace(".0","")
+            ParticipantEmail= str(xlwb.Worksheets(1).Range("C11").Value)
+            MDEmail= str(xlwb.Worksheets(1).Range("C12").Value)
+            RVPEmail = str(xlwb.Worksheets(1).Range("C13").Value)
+            currentdatetime = currentdate+"-"+currenthour
+            xlwb.Worksheets(1).Range("I1").Value = currentdatetime
+
+#Resolving missing Email Addresses in the IF Statement Below
+            if ParticipantEmail == "None" and RVPEmail == "None":
+                ParticipantEmail = MDEmail
+                cc_receiptants = ""
+                cc_receiptants = ""
+            elif MDEmail == "None" and ParticipantEmail == "None":
+                ParticipantEmail = RVPEmail
+                RVPEmail=""
+                MDEmail=""
+                cc_receiptants = "strategic.analytics@aig.com"
+            elif MDEmail=="None" and RVPEmail == "None":
+                MDEmail = ""
+                RVPEmail = ""
+                cc_receiptants = "strategic.analytics@aig.com"
+            elif RVPEmail== "None":
+                 cc_receiptants = MDEmail
+            elif MDEmail == "None":
+                cc_receiptants = RVPEmail
+            elif ParticipantEmail == "None":
+                ParticipantEmail = MDEmail
+                cc_receiptants= RVPEmail
+            else:
+                ParticipantEmail = str(xlwb.Worksheets(1).Range("C11").Value)
+                cc_receiptants = RVPEmail+";"+MDEmail
+
+            if title == "Agency Director" or title == "AGENCY DIRECTOR":
+                FileName= OutputWkbkPath + Region +"__"+ LOCode+"_"+participant+"_"+str(ESN)+"_Comp_Model_"+currentdate+".pdf"
+                body1 = open("O:\MIS\Reporting\Field Bonus Plan Reports\AD_Email_Content.txt",'r')
+                subject1 = open("O:\MIS\Reporting\Field Bonus Plan Reports\AD_Email_Subject.txt",'r')
+                body1 = body1.read()
+                subject1 = subject1.read()
+
+            else:
+                FileName = OutputWkbkPath + Region+"__"+LOCode+"_"+participant+"_"+str(ESN)+"_Comp_Model_"+currentdate+".pdf"
+                body1 = open("O:\MIS\Reporting\Field Bonus Plan Reports\MD_Email_Content.txt",'r')
+                subject1 = open("O:\MIS\Reporting\Field Bonus Plan Reports\MD_Email_Subject.txt",'r')
+                body1 = body1.read()
+                subject1 = subject1.read()
+
+            OutputFile=FileName
+            xlwb.Worksheets(1).Activate
+            print OutputFile
+            #print "CC: -> "+cc_receiptants+" Region -> "+Region+" -> Reporting Office -> "+LOCode+" -> Comp Template Recipient -> "+str(ParticipantEmail)+" -> Regional Vice President -> "+str(RVPEmail)+" -> Managing Director -> "+str(MDEmail)
+            #ws=xlwb.Worksheets(1)
+            #ws.Visible = 1
+
+            xlwb.ExportAsFixedFormat(0, OutputFile)
+            xlwb.Close(SaveChanges=False)
+
+            olMailItem = 0x0
+            newMail = obj.CreateItem(olMailItem)
+            newMail.Subject = Region+"-> "+LOCode+"-> "+participant+"-> "+ESN+"-> "+str(subject1)
+            newMail.Body = str(body1)
+            newMail.To = ParticipantEmail
+            newMail.CC = cc_receiptants
+            newMail.Attachments.Add(OutputFile)
+            newMail.Send()
+Else
+   xlApp.Quit()
+   
