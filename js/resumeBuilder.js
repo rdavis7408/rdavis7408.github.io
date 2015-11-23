@@ -55,22 +55,22 @@ var projects = {
 		"title": "Daily HTML Report",
 		"dates": "2014",
 		"description": "Using the R Language and the googleVis and RHTML libraries created a process using BAT file, ODBC to MySQL Database to update customer with daily reporting.",
-		"images": [''],
-		"url": "<a href= R_Dash_example.html>Report Example</a>"
+		"images": ['images/genesiskickstart_tksmall.jpg'],
+		"url": "R_Dash_example.html"
 	},
 	{
 		"title": "Genesis Kickstart",
 		"dates": "2015",
 		"description": "Web application used to build Wordpress themes for the Genesis Framework.",
 		"images": ['images/genesiskickstart_tksmall.jpg'],
-		"url": "<a href= R_Dash_example.html>Report Example</a>"
+		"url": "R_Dash_example.html"
 	},
 	{
 		"title": "Udacity Portfolio",
 		"completed": "2015",
 		"description": "Portfolio to show off my amazing work while working on the Udacity Front-end Nanodegree.",
 		"images": ['images/udacity-portfolio-site_small.jpg'],
-		"url": "<a href= R_Dash_example.html>Report Example</a>"
+		"url": "R_Dash_example.html"
 	}
 	]
 };
