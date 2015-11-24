@@ -113,7 +113,7 @@ var education = {
  };
 
 var certification = {
-	exam: [
+	exams: [
 		{
 		    "name" : "Microsoft Technology Associate: Database Fundamentals",
 		    "organization" : "Microsoft Corporation",
@@ -199,7 +199,10 @@ work.display = function() {
 
 	}
 };
-
+certification.display = function() {
+	for (i in certification.exams) {
+		$()
+	}
 projects.display = function() {
 	for (project in projects.projects) {
 		$("#projects").append(HTMLprojectStart);
