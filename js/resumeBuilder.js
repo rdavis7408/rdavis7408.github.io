@@ -76,8 +76,9 @@ var projects = {
 		"title": "Tableau Map",
 		"dates": "2013",
 		"description": "Tableau Map showing Colonial relationships between countries through time.",
-		"images": ['images/Python_script_send_comp.jpg'],
-		"url": "https://public.tableau.com/profile/robert.davis#!/vizhome/COW_Map_2013120601/Dashboard1"
+		"images": ['images/Tableau_Map.jpg'],
+		"url": "https://publicrevizit.tableausoftware.com/profile/robert.davis#!/vizhome/COW_Map_2013120601/Dashboard1"
+		
 	}
 	]
 };
