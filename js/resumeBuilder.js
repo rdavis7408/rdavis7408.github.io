@@ -111,6 +111,29 @@ var education = {
  	]
  };
 
+var certification = {
+	exam: [
+		{
+		    "name" : "Microsoft Technology Associate: Database Fundamentals",
+		    "organization" : "Microsoft Corporation",
+		    "date" : "2015",
+		    "url" : ""
+		},
+		{
+		    "name" : "Microsoft Certified Desktop Support",
+		    "organization" : "Microsoft Corporation",
+		    "date" : "2008",
+		    "url" : ""
+		},
+		{
+		    "name" : "Microsoft Certified Professional",
+		    "organization" : "Microsoft Corporation",
+		    "date" : "2007",
+		    "url" : ""
+		},
+		
+		]
+};
 bio.display = function() {
 	$("#header").prepend(HTMLheaderRole.replace("%data%", bio.role));
 
