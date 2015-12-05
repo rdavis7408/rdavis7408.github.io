@@ -201,7 +201,10 @@ work.display = function() {
 };
 certification.display = function() {
 	for (i in certification.exams) {
-		$()
+		$('#certification').append(HTMLcertification);
+		
+		var formattedCertification = HTMLcertificationName.replace("%data%", certification.exams[i].name) ;
+		$(".certification-entry:last").append(formattedCertification);
 	}
 projects.display = function() {
 	for (project in projects.projects) {
