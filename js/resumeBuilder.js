@@ -272,6 +272,7 @@ projects.display = function() {
 
 bio.display();
 work.display();
+certification.display();
 projects.display();
 education.display();
 
