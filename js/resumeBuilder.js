@@ -276,4 +276,4 @@ certification.display();
 projects.display();
 education.display();
 
-$("#mapDiv").append(googleMap);
+/*$("#mapDiv").append(googleMap);*/
