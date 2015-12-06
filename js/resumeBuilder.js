@@ -206,6 +206,7 @@ certification.display = function() {
 		var formattedCertification = HTMLcertificationName.replace("%data%", certification.exams[i].name) ;
 		$(".certification-entry:last").append(formattedCertification);
 	}
+}
 projects.display = function() {
 	for (project in projects.projects) {
 		$("#projects").append(HTMLprojectStart);
