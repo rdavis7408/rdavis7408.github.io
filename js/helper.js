@@ -143,7 +143,9 @@ function initializeMap() {
     for (var job in work.jobs) {
       locations.push(work.jobs[job].location);
     }
-
+    for (var i in certification.exams){
+      locations.push(certification.exams[i].locations);
+    }
     return locations;
   }
 
