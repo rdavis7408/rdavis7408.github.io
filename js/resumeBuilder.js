@@ -118,21 +118,38 @@ var certification = {
 		    "name" : "Microsoft Technology Associate: Database Fundamentals",
 		    "organization" : "Microsoft Corporation",
 		    "date" : "2015",
-		    "url" : ""
+		    "url" : "http://www.microsoft.com/learning/en-us/certification-overview.aspx"
 		},
 		{
 		    "name" : "Microsoft Certified Desktop Support",
 		    "organization" : "Microsoft Corporation",
 		    "date" : "2008",
-		    "url" : ""
+		    "url" : "http://www.microsoft.com/learning/en-us/certification-overview.aspx"
 		},
 		{
 		    "name" : "Microsoft Certified Professional",
 		    "organization" : "Microsoft Corporation",
 		    "date" : "2007",
-		    "url" : ""
+		    "url" : "http://www.microsoft.com/learning/en-us/certification-overview.aspx"
 		},
-		
+		{
+		    "name" : "Microsoft Office User - MS Access 2003",
+		    "organization" : "Microsoft Corporation",
+		    "date" : "2005",
+		    "url" : "http://www.microsoft.com/learning/en-us/certification-overview.aspx"
+		},
+				{
+		    "name" : "Salesforce.com Certified Administrator",
+		    "organization" : "Salesforce.com",
+		    "date" : "2011 - 2014",
+		    "url" : "http://certification.salesforce.com/administrators"
+		},
+				{
+		    "name" : "A+ Certified Professional IT Technician",
+		    "organization" : "CompTia",
+		    "date" : "2009",
+		    "url" : "http://certification.comptia.org/getCertified/certifications/a.aspx"
+		},
 		]
 };
 bio.display = function() {
