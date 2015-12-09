@@ -41,7 +41,7 @@ var HTMLprojectDescription = '<p><br>%data%</p>';
 var HTMLprojectImage = '<a href="#"><img src="%data%"></a>';
 
 var HTMLcertification = '<div class="certification-entry"></div>';
-var HTMLcertificationName = '<br><a href="#"> %data%</a>';
+var HTMLcertificationName = '<a href="#"> %data%</a>';
 var HTMLcertificationOrg = '<div class="certification-org">%data%</div>';
 var HTMLcertificationDate = '<div class="date-text">%date%</div>';
 
