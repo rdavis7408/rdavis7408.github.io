@@ -41,12 +41,12 @@ var HTMLprojectDescription = '<p><br>%data%</p>';
 var HTMLprojectImage = '<a href="#"><img src="%data%"></a>';
 
 var HTMLcertification = '<div class="certification-entry"></div>';
-var HTMLcertificationName = '<a href="#">%data%</a>';
+var HTMLcertificationName = '<a href="#">Date : %data%</a>';
 var HTMLcertificationOrg = '<div class="certification-org">%data%</div>';
 var HTMLcertificationDate = '<div class="cert-date">%date%</div>';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
-var HTMLschoolName = '<a href="urllink">Date : %data%</a>';
+var HTMLschoolName = '<a href="urllink">%data%</a>';
 var HTMLschoolDegree = ' -- %data%</a>';
 var HTMLschoolDates = '<div class="date-text">%data%</div>';
 var HTMLschoolLocation = '<div class="location-text">%data%</div>';
