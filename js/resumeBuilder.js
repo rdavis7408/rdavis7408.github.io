@@ -91,7 +91,7 @@ var education = {
  		"degree": "Masters of Science",
  		"major": "Secondary Education",
  		"datesAttended": "1990 - 1992",
- 		"url": "www.sju.edu"
+ 		"url": "http://www.sju.edu"
  	},
  	{
  		"name": "The University of Alabama",
@@ -99,7 +99,7 @@ var education = {
  		"degree": "Bachelor of Arts",
  		"major": "History",
  		"datesAttended": "1986 - 1989",
- 		"url": "www.ua.edu"
+ 		"url": "http://www.ua.edu"
  	}
  	],
  	"onlineCourses": [
