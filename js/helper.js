@@ -43,7 +43,7 @@ var HTMLprojectImage = '<a href="#"><img src="%data%"></a>';
 var HTMLcertification = '<div class="certification-entry"></div>';
 var HTMLcertificationName = '<a href="#"> %data%</a>';
 var HTMLcertificationOrg = '<div class="certification-org">%data%</div>';
-var HTMLcertificationDate = '<div class="cert-date">%date%</div>';
+var HTMLcertificationDate = '<div class="date-text">%date%</div>';
 
 var HTMLschoolStart = '<div class="education-entry"></div>';
 var HTMLschoolName = '<a href="urllink">%data%</a>';
