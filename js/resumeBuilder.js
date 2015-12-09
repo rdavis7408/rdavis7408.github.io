@@ -257,7 +257,8 @@ projects.display = function() {
  		for(i in education.schools) {
  			$("#education").append(HTMLschoolStart);
  
- 			var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[i].name).replace("urllink", education.schools[i].url);
+ 			var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[i].name)
+ 			var formattedSchoolName = HTMLschoolName.replace("urllink", education.schools[i].url);
  			var formattedSchoolDegree = HTMLschoolDegree.replace("%data%", education.schools[i].degree);
  			var formattedSchoolDates = HTMLschoolDates.replace("%data%", education.schools[i].datesAttended);
  			var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.schools[i].location);			
