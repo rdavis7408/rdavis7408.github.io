@@ -221,7 +221,9 @@ certification.display = function() {
 		$('#certification').append(HTMLcertification);
 		
 		var formattedCertification = HTMLcertificationName.replace("%data%", certification.exams[i].name) ;
+		var formattedDate = HTMLcertificationDate.replace("%date%", certification.exams[i].date);
 		$(".certification-entry:last").append(formattedCertification);
+		$(".certification-entry:last").append(formattedDate);
 	}
 }
 projects.display = function() {
