@@ -220,7 +220,7 @@ certification.display = function() {
 	for (i in certification.exams) {
 		$('#certification').append(HTMLcertification);
 		
-		var formattedCertification = HTMLcertificationName.replace("%data%", certification.exams[i].name) ;
+		var formattedCertification = HTMLcertificationName.replace("%data%", certification.exams[i].name).replace("#",certification.exams[i].url); ;
 		var formattedDate = HTMLcertificationDate.replace("%date%", certification.exams[i].date);
 		$(".certification-entry:last").append(formattedCertification);
 		$(".certification-entry:last").append(formattedDate);
