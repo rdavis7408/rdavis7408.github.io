@@ -25,21 +25,6 @@
     /* and repeat them horizontally */
     background-repeat: repeat-x;
 }
-Then you need to calculate percentage of your rating, to use this percentage in div width. To calculate percentage of your rating you can use this simple formula: round((rating/max_rating)*100).
-
-For example, if we have maximal possible rating 5, and current rating is 2, then percentage is:
-
-round((2
-
-
-
-
-
-
-
-
-
-
 
 
 *{
