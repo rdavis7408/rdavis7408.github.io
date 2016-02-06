@@ -44,7 +44,8 @@
 h1 {
 
   font-size: 40px;
-  color: #F5A623;
+  color: #BBC4C9;
+  /*color: #F5A623;*/
   line-height: 48px;
   display: inline;
 }
@@ -119,7 +120,8 @@ a {
 }
 
 #skillsH3 {
-  color: #F5AE23;
+  /*color: #F5AE23;*/
+  color: #BBC4C9;
   display: none;
 
 }
