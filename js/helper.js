@@ -9,7 +9,7 @@ Cameron Pittman
 These are HTML strings. As part of the course, you'll be using JavaScript functions
 replace the %data% placeholder text you see in them.
 */
-var HTMLheaderName = '<h1 id="name"><a href="index.html">%data%</a></h1>';
+var HTMLheaderName = '<h1><a href="rdavis7408.github.io">%data%</a></h1>';
 /*var HTMLheaderName = '<h1 id="name">%data%</h1>';*/
 var HTMLheaderRole = '<span>%data%</span><hr/>';
 
