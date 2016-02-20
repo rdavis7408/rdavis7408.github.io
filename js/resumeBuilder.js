@@ -79,6 +79,12 @@ var projects = {
 		"images": ['images/Tableau_Map.jpg'],
 		"url": "https://publicrevizit.tableausoftware.com/profile/robert.davis#!/vizhome/COW_Map_2013120601/Dashboard1"
 		
+	},
+	{
+		"title": "Tableau Dashboard",
+		"dates": "2016",
+		"description": "Tableau dashboard showing Crime Data from 2003 to present.",
+		"url": "https://public.tableau.com/profile/robert.davis#!/vizhome/SF_Crime_Data/SFCrimeDB"
 	}
 	]
 };
