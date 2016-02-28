@@ -96,7 +96,12 @@ var projects = {
 	       "dates": "2012",
 	       "description" : "Example of Select query in a MySQL database from a web based assessment tool with Case Statement.",
 	       "url": "query_Usage_Count_Logins_by_0month_2012040301.txt"
-	}
+	},
+	{      "title": "Python script with SQL Statements",
+	       "dates": "2016",
+	       "description" : "Python script that queries an Oracle and MS Access Databases and creates, alters, updates and inserts data into a new schema in an Oracle Database.",
+	       "url":"KPI_Script.txt"
+	}       
 	]
 };
 
