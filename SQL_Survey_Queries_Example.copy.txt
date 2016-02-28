@@ -1,0 +1,70 @@
+/*Query from Survey Postgres Database - Written while at Discovery Education */
+
+SELECT    contracts.id                                        AS      contract_id                                ,
+          contracts.name                                      AS      contract_name                              ,
+          contracts.city                                                                                         ,
+          contracts.state                                                                                        ,
+          regions.id                                          AS      region_id                                  ,
+          regions.name                                        AS      region_name                                ,
+          districts.id                                        AS      district_id                                ,
+          districts.name                                      AS      district_name                              ,
+          schools.id                                          AS      school_id                                  ,
+          schools.name                                        AS      school_name                                ,
+          principals.id                                       AS      principal_id                               ,
+          principals.name                                     AS      principal_name                             ,
+          questionnaire_exemplars.id                          AS      questionnaire_exemplars_id                 ,
+          questionnaire_exemplars.name                        AS      questionnaire_exemplars_name               ,
+          questionnaire_exemplars.description                 AS      questionnaire_exemplars_description        ,
+          surveys.id                                          AS      surveys_id                                 ,
+          surveys.status                                      AS      survey_status                              ,
+          surveys.starts_on                                   AS      surveys_starts_on                          ,
+          surveys.created_at                                  AS      surveys_created_at                         ,
+          surveys.updated_at                                  AS      surveys_updated_at                        ,
+          access_codes.id                                     AS      access_codes_id                            ,
+          access_codes.value                                  AS      access_codes_value                         ,
+          access_codes.in_progress                            AS      access_codes_in_progress                   ,
+          access_codes.used                                   AS      access_codes_used                          ,
+          access_codes.updated_at                             AS      access_codes_updated_at                    ,
+          questions.id                                        AS      questions_id                               ,
+          questions.questionnaire_page_id                     AS      questionnaire_page_id                      ,
+          questions.position                                  AS      questions_position                         ,
+          questions.name                                      AS      questions_name                             ,
+          question_categories.id                              AS      question_categories_id                     ,
+          question_categories.name                            AS      question_categories_name                   ,
+          questionnaire_pages.id                              AS      questionnaire_pages_id                     ,
+          questionnaire_pages.description                     AS      questionnaire_pages_description            ,
+          question_responses.id                               AS      question_responses_id                      ,
+          question_responses.name                             AS      question_responses_name                    ,
+          question_responses.value                            AS      question_responses_value                   ,
+          survey_question_evidence_sources.id                 AS      survey_question_evidence_sources_id        ,
+          survey_question_evidence_sources.evidence_source_id AS      svy_quest_evid_source_evidence_source_id   ,
+          evidence_sources.id                                 AS      evidence_sources_id                        ,
+          evidence_sources.name                               AS      evidence_sources_name                      ,
+          evidence_sources.position                           AS      evidence_sources_position                  ,
+          evidence_sources.questionnaire_id                   AS      evidence_sources_questionnaire_id          ,
+          evidence_sources.report_group                       AS      evidence_sources_report_group              
+          
+          
+FROM    contracts
+                                                                              
+JOIN    regions                           ON        contracts.id                                        =   regions.contract_id                       
+JOIN    districts                         ON        regions.id                                          =   districts.region_id                       
+JOIN    schools                           ON        districts.id                                        =   schools.district_id                       
+JOIN    principals                        ON        schools.id                                          =   principals.school_id                      
+JOIN    surveys                           ON        principals.id                                       =   surveys.principal_id                      
+JOIN    access_codes                      ON        surveys.id                                          =   access_codes.survey_id                    
+JOIN    survey_responses                  ON        access_codes.id                                     =   survey_responses.access_code_id           
+JOIN    survey_question_responses         ON        survey_responses.id                                 =   survey_question_responses.survey_response_id
+JOIN    questions                         ON        survey_question_responses.question_id               =   questions.id                              
+JOIN    questionnaires                    ON        survey_responses.questionnaire_id                   =   questionnaires.id                        
+JOIN    questionnaire_exemplars           ON        questionnaires.questionnaire_exemplar_id            =   questionnaire_exemplars.id
+JOIN    question_responses                ON        questionnaires.id                                   =   question_responses.questionnaire_id
+                                         AND        survey_question_responses.response_id               =   question_responses.id
+JOIN    questionnaire_pages               ON        questions.questionnaire_page_id                     =   questionnaire_pages.id
+JOIN    question_categories               ON        questions.question_category_id                      =   question_categories.id
+JOIN    survey_question_evidence_sources  ON        survey_responses.id                                  =   survey_question_evidence_sources.survey_response_id
+                                         AND        questions.id                                        =   survey_question_evidence_sources.question_id
+JOIN    evidence_sources                  ON        survey_question_evidence_sources.evidence_source_id =   evidence_sources.id
+                                         AND        questionnaires.id                                   =   evidence_sources.questionnaire_id
+
+WHERE contracts.id IN (36,39,40,41,42,43,44)
