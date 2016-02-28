@@ -96,6 +96,7 @@ var projects = {
 	       "dates": "2012",
 	       "description" : "Example of Select query in a MySQL database from a web based assessment tool with Case Statement.",
 	       "url": "query_Usage_Count_Logins_by_0month_2012040301.txt"
+	}
 	]
 };
 
