@@ -90,13 +90,13 @@ var projects = {
 	{      "title": "SQL Select Query Example 1",
 	       "dates": "2014",
 	       "description": "Example of a Select query in a Postgres database from a web based survey tool.",
-	       "images": ,
+	     
 	       "url": "SQL_Survey_Queries_Example.copy.txt"
 	},
 	{      "title": "SQL Select Query Example 2",
 	       "dates": "2012",
 	       "description": "Example of Select query in a MySQL database from a web based assessment tool with Case Statement.",
-	       "images": ,
+	       
 	       "url": "query_Usage_Count_Logins_by_0month_2012040301.txt"
 	},
 	{      "title": "Python script with SQL Statements",
