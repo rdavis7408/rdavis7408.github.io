@@ -72,14 +72,14 @@ var projects = {
 		"images": ['images/Python_script_send_comp.jpg'],
 		"url": "Script_to_send_KPIs.txt"
 	},
-/*	{
+	{
 		"title": "Tableau Map",
 		"dates": "2013",
 		"description": "Tableau Map showing Colonial relationships between countries through time.",
 		"images": ['images/Tableau_Map.jpg'],
 		"url": "https://publicrevizit.tableausoftware.com/profile/robert.davis#!/vizhome/COW_Map_2013120601/Dashboard1"
 		
-	},*/
+	},
 	{
 		"title": "Tableau Dashboard",
 		"dates": "2016",
