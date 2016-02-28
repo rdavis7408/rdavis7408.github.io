@@ -92,11 +92,11 @@ var projects = {
 	       "description": "Example of a Select query in a Postgres database from a web based survey tool.",
 	       "url": "SQL_Survey_Queries_Example.copy.txt"
 	},
-	{      "title": "SQL Select Query Example 2",
+/*	{      "title": "SQL Select Query Example 2",
 	       "dates": "2012",
 	       "description": "Example of Select query in a MySQL database from a web based assessment tool with Case Statement.",
 	       "url": "query_Usage_Count_Logins_by_0month_2012040301.txt"
-	},
+	},*/
 	{      "title": "Python script with SQL Statements",
 	       "dates": "2016",
 	       "description": "Python script that queries an Oracle and MS Access Databases and creates, alters, updates and inserts data into a new schema in an Oracle Database.",
