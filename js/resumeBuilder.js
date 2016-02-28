@@ -87,9 +87,9 @@ var projects = {
 		"images":['images/SF_Crime_Data_Thumbnail.png'],
 		"url": "https://public.tableau.com/profile/robert.davis#!/vizhome/SF_Crime_Data/SFCrimeDB"
 	},
-	{      "title": "SQL Select Query"
-	       "dates": "2014"
-	       "description": "Example of a Select query in a Postgres database from a web based survey tool."
+	{      "title": "SQL Select Query",
+	       "dates": "2014",
+	       "description": "Example of a Select query in a Postgres database from a web based survey tool.",
 	       "url": "SQL_Survey_Queries_Example.copy.txt"
 	}
 	]
