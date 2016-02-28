@@ -87,7 +87,7 @@ var projects = {
 		"images":['images/SF_Crime_Data_Thumbnail.png'],
 		"url": "https://public.tableau.com/profile/robert.davis#!/vizhome/SF_Crime_Data/SFCrimeDB"
 	},
-/*	{      "title": "SQL Select Query Example 1",
+	{      "title": "SQL Select Query Example 1",
 	       "dates": "2014",
 	       "description": "Example of a Select query in a Postgres database from a web based survey tool.",
 	       "url": "SQL_Survey_Queries_Example.copy.txt"
@@ -96,7 +96,7 @@ var projects = {
 	       "dates": "2012",
 	       "description": "Example of Select query in a MySQL database from a web based assessment tool with Case Statement.",
 	       "url": "query_Usage_Count_Logins_by_0month_2012040301.txt"
-	},*/
+	},
 	{      "title": "Python script with SQL Statements",
 	       "dates": "2016",
 	       "description": "Python script that queries an Oracle and MS Access Databases and creates, alters, updates and inserts data into a new schema in an Oracle Database.",
