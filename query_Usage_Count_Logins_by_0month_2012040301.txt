@@ -1,0 +1,40 @@
+SELECT
+	sc_schools.name as School_Name			,
+	sc_schools.schoolkey				,
+	usr_teachers.firstname as First_Name		,
+	usr_teachers.lastname as Last_Name		,
+	usr_teachers.teacherkey				,
+	usr_teachers.acl_class as Role			,
+	#COUNT(log_session.userkey) as Number_Logins	
+	
+	COUNT(CASE 
+		WHEN SUBSTRING(log_session.datetime, 1, 7)= "2011-08" THEN log_session.userkey END) as Number_Logins_Aug,
+	COUNT(CASE
+		WHEN SUBSTRING(log_session.datetime, 1, 7)= "2011-09" THEN log_session.userkey END) as Number_Logins_Sep,
+	COUNT(CASE 
+		WHEN SUBSTRING(log_session.datetime, 1, 7)="2011-10" THEN log_session.userkey END) as Number_Logins_Oct,
+	COUNT(CASE 
+		WHEN SUBSTRING(log_session.datetime, 1, 7)= "2011-11" THEN log_session.userkey END)as Number_Logins_Nov,
+	COUNT(CASE 
+		WHEN SUBSTRING(log_session.datetime, 1, 7)= "2011-12" THEN log_session.userkey END) as Number_Logins_Dec,
+	COUNT(CASE 
+		WHEN SUBSTRING(log_session.datetime, 1, 7)= "2012-01" THEN log_session.userkey END) as Number_Logins_Jan,
+	COUNT(CASE 
+		WHEN SUBSTRING(log_session.datetime, 1, 7)= "2012-02" THEN log_session.userkey END) as Number_Logins_Feb,
+	COUNT(CASE 
+		WHEN SUBSTRING(log_session.datetime, 1, 7)= "2012-03" THEN log_session.userkey END) as Number_Logins_Mar
+	
+
+FROM sc_schools
+
+LEFT JOIN usr_teachers ON sc_schools.schoolkey 		=	usr_teachers.schoolkey
+LEFT JOIN log_session ON usr_teachers.teacherkey	=       log_session.userkey
+
+WHERE
+
+
+	sc_schools.schoolkey = 2107
+AND
+	log_session.action = "init"
+
+GROUP BY usr_teachers.teacherkey
