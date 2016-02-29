@@ -104,7 +104,7 @@ var projects = {
 	{      
 	       "title": "Python script with SQL Statements",
 	       "dates": "2016",
-	       "description": "Python script that queries an Oracle and MS Access Databases and creates, alters, updates and inserts data into a new schema in an Oracle Database.",
+	       "description": "Python script that queries an Oracle and MS Access Databases and demonstrates Create, Alter, Update, Drop and Inserts tables into a new schema in an Oracle Database.",
 	       "url":"KPI_Script.txt"
 	}       
 	]
