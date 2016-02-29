@@ -37,4 +37,9 @@ WHERE
 AND
 	log_session.action = "init"
 
-GROUP BY usr_teachers.teacherkey
+GROUP BY usr_teachers.teacherkey                        ,
+        sc_schools.name                 		,
+	sc_schools.schoolkey				,
+	usr_teachers.firstname           		,
+	usr_teachers.lastname            		,
+	usr_teachers.acl_class 		
