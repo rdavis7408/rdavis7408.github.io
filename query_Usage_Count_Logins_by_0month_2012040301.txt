@@ -5,8 +5,6 @@ SELECT
 	usr_teachers.lastname as Last_Name		,
 	usr_teachers.teacherkey				,
 	usr_teachers.acl_class as Role			,
-	#COUNT(log_session.userkey) as Number_Logins	
-	
 	COUNT(CASE 
 		WHEN SUBSTRING(log_session.datetime, 1, 7)= "2011-08" THEN log_session.userkey END) as Number_Logins_Aug,
 	COUNT(CASE
