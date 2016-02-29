@@ -101,12 +101,12 @@ var projects = {
 	       "images": ['images/case_statement.png'],
 	       "url": "query_Usage_Count_Logins_by_0month_2012040301.txt"
 	},
-	{      
+/*	{      
 	       "title": "Python script with SQL Statements",
 	       "dates": "2016",
 	       "description": "Python script that queries an Oracle and MS Access Databases and demonstrates Create, Alter, Update, Drop and Insert queries within a new schema in an Oracle Database.",
 	       "url":"KPI_Script.txt"
-	}       
+	}      */ 
 	]
 };
 
