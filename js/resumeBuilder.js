@@ -12,12 +12,16 @@ var bio = {
 	"welcomeMessage": "Turning data into information, visualizations, and reporting",
 	"summary": "Over six years of experience as a Data Analyst and Senior Business Analyst supporting Fortune 500 firms' operation. Experience working across disparate data sources to synthesize data for project and organizational goals. Research, analyze and capture sales trends, key performance indicators, web usage data, operational processes and cross-functional relationships. As part of a team, providing weekly progress reports and being autonomous to self-direct individual efforts. ",
 	
-	"skills": ["Python", "R Language", "Transact SQL", "PL / SQL", "Tableau", "Salesforce Administration", "VBA"],
+	"skills": ["Python", "R Language", "Transact SQL", "PL / SQL", "Tableau", "Salesforce Administration", "VBA", "Apex","SOQL","Visualforce"],
          "applications": ["SQL Server Management Studio", "PyCharm", "Oracle SQL Developer", "Salesforce.com", "MS Excel", "R Studio", "MS Access", "JIRA", "MS Word", "MS PowerPoint", "Tableau","MySQL Workbench"]
        
 };
 var work = {
 	"jobs": [
+	{      "employer": "Sitel",
+	       "title":"Salesforce Developer",
+	       "location":"Nashville, TN",
+	       "description":"Creation of Apex Classes, Triggers, Test Classes and Lightning Components."
 	{
 		"employer": "AIG",
 		"title": "Senior Business Analyst",
@@ -142,6 +146,11 @@ var education = {
 
 var certification = {
 	exams: [
+		{"name":"Salesforce Platform Developer I",
+		 "organization": "Salesforce.com",
+		 "date": "2016",
+		 "url": "http://certification.salesforce.com/platform-developers?trk=profile_certification_title"
+		},
 		{
 		    "name" : "Microsoft Technology Associate: Database Fundamentals",
 		    "organization" : "Microsoft Corporation",
