@@ -20,6 +20,7 @@ var work = {
 	"jobs": [
 	{      "employer": "Sitel",
 	       "title":"Salesforce Developer",
+	       "dates": "2016 - present",
 	       "location":"Nashville, TN",
 	       "description":"Creation of Apex Classes, Triggers, Test Classes and Lightning Components."
 	},
@@ -27,7 +28,7 @@ var work = {
 		"employer": "AIG",
 		"title": "Senior Business Analyst",
 		"location": "Brentwood, TN",
-		"dates": "2014 - present",
+		"dates": "2014 - 2016",
 		"description": "Gathering of business requirements for visualizations and reporting. Creation of standardized and ad hoc reporting using SQL, Visual Basic for Applications, Tableau, Python, MS Access, MS Excel, and Oracle SQL Developer Tool. Design and implementation of visualizations and dashboards using Tableau. Creation of Visual Basic for Applications Macros and Python to automate repetitive tasks to ensure accuracy and standardization of reports."
 	},
 	{
