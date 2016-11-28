@@ -20,8 +20,8 @@ var work = {
 	"jobs": [
 	{      "employer": "Sitel",
 	       "title":"Salesforce Developer",
-	       "dates": "2016 - present",
 	       "location":"Nashville, TN",
+	       "dates": "2016 - present",
 	       "description":"Creation of Apex Classes, Triggers, Test Classes and Lightning Components."
 	},
 	{
