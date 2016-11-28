@@ -187,7 +187,7 @@ var certification = {
 		    "organization" : "CompTia",
 		    "date" : "2009",
 		    "url" : "http://certification.comptia.org/getCertified/certifications/a.aspx"
-		},
+		}
 		]
 };
 bio.display = function() {
