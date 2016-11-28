@@ -22,6 +22,7 @@ var work = {
 	       "title":"Salesforce Developer",
 	       "location":"Nashville, TN",
 	       "description":"Creation of Apex Classes, Triggers, Test Classes and Lightning Components."
+	},
 	{
 		"employer": "AIG",
 		"title": "Senior Business Analyst",
