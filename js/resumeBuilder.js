@@ -9,12 +9,8 @@ var bio = {
 		"location": "Pleasant View, TN"
 	},
 	"biopic": "https://media.licdn.com/media/AAEAAQAAAAAAAAg_AAAAJDk5M2RhMWExLWNlZWQtNDEwNC1iYTI0LWJlNjI3YmI0MTdhMg.jpg",
-	"welcomeMessage": "Creating custom solutions for Salesforce users and processes.",
-	"summary": "Experienced Salesforce Developer and Administrator supporting over 350 users with customizations to include triggers, Apex Classes and Controllers, Visualforce pages, workflows, Process Builder and Flows.",
-	
-	"skills": [],
-         "applications": []
-       
+	"welcomeMessage": "Creating custom solutions for Salesforce users and processes."
+
 };
 var work = {
 	"jobs": [
