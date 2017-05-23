@@ -1,6 +1,6 @@
 var bio = {
 	"name": "Robert L. Davis",
-	"role": "Senior Buisiness Analyst",
+	"role": "Salesforce Professional: Developer / Administrator",
 	"contact": {
 		"mobile": "931.436.6656",
 		"email": "rdavis7408@gmail.com",
@@ -10,7 +10,7 @@ var bio = {
 	},
 	"biopic": "https://media.licdn.com/media/AAEAAQAAAAAAAAg_AAAAJDk5M2RhMWExLWNlZWQtNDEwNC1iYTI0LWJlNjI3YmI0MTdhMg.jpg",
 	"welcomeMessage": "Turning data into information, visualizations, and reporting",
-	"summary": "Over six years of experience as a Data Analyst and Senior Business Analyst supporting Fortune 500 firms' operation. Experience working across disparate data sources to synthesize data for project and organizational goals. Research, analyze and capture sales trends, key performance indicators, web usage data, operational processes and cross-functional relationships. As part of a team, providing weekly progress reports and being autonomous to self-direct individual efforts. ",
+	"summary": "Experienced Salesforce Developer and Administrator supporting over 350 user and customizations to include triggers, Apex Classes and Controllers, Visualforce pages, workflows, Process Builder and Flows.",
 	
 	"skills": ["Python", "R Language","Apex", "Transact SQL", "PL / SQL", "Tableau", "Salesforce Administration", "VBA", "SOQL","Visualforce"],
          "applications": ["SQL Server Management Studio", "PyCharm", "Oracle SQL Developer", "Salesforce.com", "MS Excel", "R Studio", "MS Access", "JIRA", "MS Word", "MS PowerPoint", "Tableau","MySQL Workbench"]
