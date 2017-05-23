@@ -12,8 +12,8 @@ var bio = {
 	"welcomeMessage": "Creating custom solutions for Salesforce users and processes.",
 	"summary": "Experienced Salesforce Developer and Administrator supporting over 350 users with customizations to include triggers, Apex Classes and Controllers, Visualforce pages, workflows, Process Builder and Flows."
 	
-	/*"skills": ["Python", "R Language","Apex", "Transact SQL", "PL / SQL", "Tableau", "Salesforce Administration", "VBA", "SOQL","Visualforce"],
-         "applications": ["SQL Server Management Studio", "PyCharm", "Oracle SQL Developer", "Salesforce.com", "MS Excel", "R Studio", "MS Access", "JIRA", "MS Word", "MS PowerPoint", "Tableau","MySQL Workbench"]*/
+	"skills": [],
+         "applications": []
        
 };
 var work = {
