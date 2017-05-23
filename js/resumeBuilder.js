@@ -203,7 +203,7 @@ bio.display = function() {
 	$("#topContacts").append(HTMLlocation.replace("%data%", bio.contact.location));
 
 	$("#header").append(HTMLbioPic.replace("%data%", bio.biopic));
-        
+/*        
         $("#header").append(HTMLsummary.replace("%data%", bio.summary));
         
 	if (bio.skills.length > 0) {
@@ -214,12 +214,12 @@ bio.display = function() {
 			var formattedSkill = HTMLskills.replace('%data%', bio.skills[i]);
 			$('#skills').append(formattedSkill);
 		}
-/* 		formattedSkill = HTMLskills.replace('%data%', bio.skills[1]);
+ 		formattedSkill = HTMLskills.replace('%data%', bio.skills[1]);
 		$('#skills').append(formattedSkill);
 		formattedSkill = HTMLskills.replace('%data%', bio.skills[2]);
-		$('#skills').append(formattedSkill); */
+		$('#skills').append(formattedSkill); 
 	}
-	
+	*/
 	
 	
 	$("#footerContacts").append(HTMLmobile.replace("%data%", bio.contact.mobile));
